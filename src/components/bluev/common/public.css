@@ -1,0 +1,21 @@
+.top_position {
+    height: 42px;
+    padding: 0 16px;
+    line-height: 42px;
+    border-bottom: 1px solid #ececec;
+}
+
+.footer {
+    background: #f2f1f4;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.W_input_error {
+    border: 1px solid;
+}
+
+#S_CSS_bluev_common_public {
+    height: 42px;
+}

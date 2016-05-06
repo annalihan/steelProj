@@ -1,0 +1,564 @@
+- if (dapart == "enterprise")
+    div.inputinfo.info_enterprise(node-type="recordForm")
+        include ../common/top_position
+        include ../common/verifyNav/tpl
+        div.base_info
+            p.item_title 企业业务资料
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="realname")
+                                | 企业名称
+                        td
+                            input(id="realname", value="#{realname}", verify="acttype=notEmpty&errmsg=企业名称不能为空&sucmsg=true")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 请输入营业执照上的全称，只支持中国大陆工商局或市场监督管理局登记的企业。
+                    tr
+                        th
+                            label(for="regnumber")
+                                | 营业执照注册号
+                        td
+                            input(id="regnumber", value="#{regnumber}", verify="acttype=notEmpty&errmsg=营业执照注册号不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 请输入15位营业执照注册号或18位统一社会信用代码。
+                    tr
+                        th.twolineth
+                            label(for="legalperson")
+                                | 法定代表人/企业负责人姓名
+                        td
+                            input(id="legalperson", value="#{legalperson}", verify="acttype=notEmpty&errmsg=法定代表人/企业负责人不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 按照营业执照上填写。如果属于分公司则填写工商营业执照上明确的负责人，个体工商户请填写经营者姓名，合伙企业请填写投资人姓名，企业法人的非法人分支机构填写负责人姓名。
+        div.contact_info
+            p.item_title 运营者信息
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="contact_name")
+                                | 运营者姓名
+                        td
+                            input.contact_150(id="contact_name", value="#{contact_name}", verify="acttype=notEmpty&errmsg=运营者姓名不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="identity_id")
+                                | 运营者身份证号码
+                        td
+                            input.contact_294(id="identity_id", value="#{identity_id}", verify="acttype=notEmpty|IDcard&errmsg=运营者身份证号码不能为空||请输入正确的身份证号码")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="contact_mobile")
+                                | 运营者手机号码
+                        td
+                            input.contact_200(id="contact_mobile", value="#{contact_mobile}", verify="acttype=notEmpty&errmsg=运营者手机号码不能为空")
+                            a.btn_upload.W_btn_b(node-type="getverifycode") 获取验证码
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="authcode")
+                                | 短信验证码
+                        td
+                            input.contact_150(id="authcode")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="contact_tel")
+                                | 运营者座机
+                        td
+                            input.contact_200(id="contact_tel", value="#{contact_tel}", verify="acttype=notEmpty&errmsg=运营者座机不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 包括区号、电话、分机号，以“-”隔开。
+                    tr
+                        th
+                            label(for="email")
+                                | 电子邮箱
+                        td
+                            input.contact_294(id="email", value="#{email}")
+                            span.input_tip(err-tips="#{errtips}", verify="acttype=email&errmsg=请输入正确的邮箱格式")
+        div.upload_file
+            p.item_title 企业基本资料
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="file_1_rec")
+                                | 企业工商营业执照
+                        - if (file_1_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_1_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 只支持中国大陆工商局或市场监督管理局颁发的工商营业执照，且必须在有效期内。若办理过三证合一的企业，请再次上传最新的营业执照。非中国大陆地区认证请参考海外认证。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 只支持中国大陆工商局或市场监督管理局颁发的工商营业执照，且必须在有效期内。若办理过三证合一的企业，请再次上传最新的营业执照。非中国大陆地区认证请参考海外认证。
+                    tr
+                        th
+                            label(for="file_2_rec")
+                                | 认证公函
+                        - if (file_2_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_2_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 下载填写
+                                    a(href="weibo.com") 《官方认证通用申请公函》
+                                    | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 下载填写
+                                    a(href="weibo.com") 《官方认证通用申请公函》
+                                    | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
+                    tr
+                        th
+                            label(for="file_3_rec")
+                                | 商标注册证（选填）
+                        - if (file_3_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_3_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 如体现商标品牌，需上传商标注册证。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 如体现商标品牌，需上传商标注册证。
+                    tr
+                        th.twolineth
+                            label(for="file_4_rec")
+                                | 网站ICP备案查询截图（选填）
+                        - if (file_4_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_4_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 请上传工信部网站ICP备案号查询结果截图，
+                                    a(href="http://www.miitbeian.gov.cn") 点击查询
+                                    | 。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 请上传工信部网站ICP备案号查询结果截图，
+                                    a(href="http://www.miitbeian.gov.cn") 点击查询
+                                    | 。
+                    tr
+                        th
+                            label(for="file_5_rec")
+                                | 软件著作证（选填）
+                        - if (file_5_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_5_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 若认证应用类，请上传《软件著作证》。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 若认证应用类，请上传《软件著作证》。
+                    tr
+                        th
+                            label(for="file_6_rec")
+                                | 其他材料
+                        - if (file_6_rec)
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 重新上传
+                                img.file_preview(src="#{file_6_rec}")
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 若有其他证明材料，可上传文件。
+                        - else
+                            td
+                                div.upload_img
+                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    a.W_btn_b.btn_upload
+                                        em.W_ficon.S_ficon.ficon_add +
+                                        | 上传
+                                .file_formintro
+                                    span.W_icon.icon_warnS.icon_formintro
+                                    | 若有其他证明材料，可上传文件。
+        include ../common/footer
+- if (dapart == "group")
+    div.inputinfo.info_group(node-type="recordForm")
+        include ../common/top_position
+        include ../common/verifyNav/tpl
+        div.base_info
+            p.item_title 机构资料填写
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="realname")
+                                | 组织机构名称
+                        td
+                            input(id="realname", value="#{realname}", action-type="checkbind", vmax="60", action-data="acttype=notEmpty|max&errmsg=组织机构名称不能为空||不能超过30个字")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 请输入组织机构全称，不超过30个字。
+                    tr
+                        th
+                            label(for="organization_code")
+                                | 组织机构代码
+                        td
+                            input(id="organization_code", value="#{organization_code}", verify="acttype=notEmpty&errmsg=组织机构代码不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 请输入9位组织机构代码，如12345678-9；或三证合一后18位的统一社会信用代码。
+        div.contact_info
+            p.item_title 运营者信息
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="contact_name")
+                                | 运营者姓名
+                        td
+                            input(id="contact_name", value="#{contact_name}", verify="acttype=notEmpty&errmsg=运营者姓名不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="identity_id")
+                                | 运营者身份证号码
+                        td
+                            input(id="identity_id", value="#{identity_id}", verify="acttype=notEmpty|IDcard&errmsg=运营者身份证号码不能为空||请输入正确的身份证号码")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="contact_mobile")
+                                | 运营者手机号码
+                        td
+                            input.mobile(id="contact_mobile", value="#{contact_mobile}", verify="acttype=notEmpty&errmsg=运营者手机号码不能为空")
+                            a.btn_upload.W_btn_b(node-type="getverifycode") 获取验证码
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="authcode")
+                                | 短信验证码
+                        td
+                            input(id="authcode")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                            label(for="contact_tel")
+                                | 运营者座机
+                        td
+                            input(id="contact_tel", value="#{contact_tel}", verify="acttype=notEmpty&errmsg=运营者座机不能为空")
+                            span.input_tip(err-tips="#{errtips}")
+                    tr
+                        th
+                        td.formintro
+                            | 包括区号、电话、分机号，以“-”隔开。
+                    tr
+                        th
+                            label(for="email")
+                                | 电子邮箱
+                        td
+                            input.email(id="email", value="#{email}", verify="acttype=email&errmsg=请输入正确的邮箱格式")
+                            span.input_tip(err-tips="#{errtips}")
+        div.upload_file
+            p.item_title 组织机构资料上传
+            table.item_input
+                tbody
+                    tr
+                        th
+                            label(for="file_1_rec")
+                                | 组织机构代码证
+                        td
+                            span.W_icon.icon_warnS.icon_formintro
+                            | 请上传组织机构代码证原件扫描件或拍照件，非中国大陆地区认证请参考
+                            a(href="weibo.com") 海外认证
+                            | 。支持.jpg .gif .png格式的文件，大小不超过5M。
+                    tr
+                        th
+                        td
+                            - if (file_1_rec)
+                                a.btn_upload.W_btn_b 重新上传
+                            - else
+                                a.btn_upload.W_btn_b 上传文件
+                    - if (file_1_rec)
+                        tr
+                            th
+                            td
+                                img.file_preview(src="#{file_1_rec}")
+                    - if (class_id == "group")
+                        tr
+                            th
+                                label(for="file_2_rec")
+                                    | 认证公函
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 下载填写
+                                a(href="weibo.com") 《官方认证通用申请公函》
+                                | ，填写完整后加盖红色公章，上传清晰的公函扫描件。支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_2_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_2_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th
+                                label(for="file_3_rec")
+                                    | 宗教场所登记证
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 寺庙、道观补充宗教场所登记证，支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_3_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_3_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_3_rec}")
+                        tr
+                            th
+                                label(for="file_4_rec")
+                                    | 其他材料
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 若有其他证明材料，可上传文件：支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_4_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_4_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_4_rec}")
+                    - if (class_id == "fans")
+                        tr
+                            th
+                                label(for="file_2_rec")
+                                    | 粉丝团认证公函
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 下载填写
+                                a(href="weibo.com") 《官方认证通用申请公函》
+                                | ，填写完整后加盖红色公章，上传清晰的公函扫描件。支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_2_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_2_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th
+                                label(for="file_3_rec")
+                                    | 其他材料
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 若有其他证明材料，可上传文件：支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_3_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_3_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_3_rec}")
+                    - if (class_id == "sports")
+                        tr
+                            th
+                                label(for="file_2_rec")
+                                    | 认证公函
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 下载填写
+                                a(href="weibo.com") 《官方认证通用申请公函》
+                                | ，填写完整后加盖红色公章，上传清晰的公函扫描件。支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_2_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_2_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th
+                                label(for="file_3_rec")
+                                    | 球迷俱乐部授权书
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 需提供该球队授权，支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_3_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_3_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_3_rec}")
+                        tr
+                            th
+                                label(for="file_4_rec")
+                                    | 其他材料
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 若有其他证明材料，可上传文件：支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_4_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_4_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_4_rec}")
+                    - if (class_id == "starstudio")
+                        tr
+                            th
+                                label(for="file_2_rec")
+                                    | 认证公函
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 下载填写
+                                a(href="weibo.com") 《官方认证通用申请公函》
+                                | ，填写完整后加盖红色公章，上传清晰的公函扫描件。支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_2_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_2_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th
+                                label(for="file_3_rec")
+                                    | 其他材料
+                            td
+                                span.W_icon.icon_warnS.icon_formintro
+                                | 若有其他证明材料，可上传文件：支持.jpg .gif .png格式，大小不超过5M。
+                        tr
+                            th
+                            td
+                                - if (file_3_rec)
+                                    a.btn_upload.W_btn_b 重新上传
+                                - else
+                                    a.btn_upload.W_btn_b 上传文件
+                        - if (file_3_rec)
+                            tr
+                                th
+                                td
+                                    img.file_preview(src="#{file_3_rec}")
+        include ../common/footer

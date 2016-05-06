@@ -1,0 +1,35 @@
+.protocol_content
+	include ../common/top_position
+	include ../common/verifyNav/tpl
+	- if (status == "success")
+		.identifyStatus
+			<span class="W_icon icon_succB"></span>
+			h3 支付成功
+			p 我们会在3个工作日内对您的资料进审核，请耐心等待。
+			.tips 如有问题请联系
+				a.S_link1(href="#") @微博蓝V认证
+	- if (status == "wait")
+		.identifyStatus
+			<span class="W_icon icon_warnB"></span>
+			h3 您提交的资料我们已经收到
+			p 我们会在3个工作日内对您的资料进审核，请耐心等待。
+	- if (status == "revise")
+		.identifyStatus
+			<span class="W_icon icon_warnB"></span>
+			h3 资料需修改
+			.reason
+				p 您提交的资料由于以下原因未通过审核，请修改后重新提交。
+				p 1.原因原因原因原因原因原因原因
+				p 2.原因原因原因
+			.optBtn
+				a.W_btn_a(node-type='reviseBtn' href='#') 去修改
+	- if (status == "reject")
+		.identifyStatus
+			<span class="W_icon icon_rederrorB"></span>
+			h3 认证被拒绝
+			.reason
+				p 由于以下原因，您的认证被拒绝。
+				p 1.原因原因原因原因原因原因原因
+				p 2.原因原因原因
+			.optBtn
+				a.W_btn_a(node-type='reviseBtn' href='#') 重新认证
