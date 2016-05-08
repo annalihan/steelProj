@@ -8,7 +8,8 @@ var errFn = require('common/pageError/logic');
 var utilBee = require('utils/bee');
 
 var pathnameAnalysis = '/v1/public/bluev/';
-var pathnameAnalysis_online = '/t6/business/src/_html/bluev/';
+var pathnameAnalysis_online = '/v1/public/bluev/';
+// var pathnameAnalysis_online = '/t6/business/src/_html/bluev/';
 //首页前端假数据访问地址http://js.t.sinajs.cn/t6/business/src/_html/bluev/
 
 var mainBox = document.body;
@@ -18,7 +19,7 @@ steel.config({
     version: version,
     basePath: '/',
     jsPath: 'http://js.t.sinajs.cn/t6/business/',
-    cssPath: 'http://img.t.sinajs.cn/t6/business/',
+    cssPath: 'http://js.t.sinajs.cn/t6/business/',
     ajaxPath: '/',
     mainBox: mainBox,
     router: [

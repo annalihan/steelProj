@@ -1,4 +1,5 @@
 ;
 steel.config({
-  debug: true
+  debug: true,
+  jsPath: "http://js.t.sinajs.cn/t6/business/"
 });

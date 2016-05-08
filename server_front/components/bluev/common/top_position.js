@@ -2,17 +2,17 @@ steel.d("components/bluev/common/top_position", ["tpl/runtime"],function(require
 var jade = require('tpl/runtime');
 var undefined = void 0;
 module.exports = function template(locals) {
-var jade_debug = [{ lineno: 1, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" }];
+var jade_debug = [{ lineno: 1, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" }];
 try {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
 ;var locals_for_with = (locals || {});(function (dapart) {
-jade_debug.unshift({ lineno: 0, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
-jade_debug.unshift({ lineno: 1, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 0, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 1, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push("<p class=\"top_position\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
-jade_debug.unshift({ lineno: 2, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 2, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push("<a href=\"http://verified.weibo.com/verify\" target=\"_blank\" class=\"W_f14 varifyindex\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.unshift({ lineno: 2, filename: jade_debug[0].filename });
@@ -21,25 +21,25 @@ jade_debug.shift();
 jade_debug.shift();
 buf.push("</a>");
 jade_debug.shift();
-jade_debug.unshift({ lineno: 3, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 3, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push("<span class=\"W_f14\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.unshift({ lineno: 3, filename: jade_debug[0].filename });
 buf.push(" ");
 jade_debug.shift();
-jade_debug.unshift({ lineno: 4, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 4, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 if(dapart == "enterprise")
 {
-jade_debug.unshift({ lineno: 5, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
-jade_debug.unshift({ lineno: 5, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 5, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 5, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push(">企业认证");
 jade_debug.shift();
 jade_debug.shift();
 }
 else if(dapart = "group")
 {
-jade_debug.unshift({ lineno: 7, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
-jade_debug.unshift({ lineno: 7, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 7, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 7, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push(">机构认证");
 jade_debug.shift();
 jade_debug.shift();
@@ -48,7 +48,7 @@ jade_debug.shift();
 jade_debug.shift();
 buf.push("</span>");
 jade_debug.shift();
-jade_debug.unshift({ lineno: 8, filename: "/Users/lihan/projects/js.wcdn.cn/t6/business/src/components/bluev/common/top_position.jade" });
+jade_debug.unshift({ lineno: 8, filename: "/Users/lihan/Documents/projects/js.wcdn.cn/t6/steelProj/src/components/bluev/common/top_position.jade" });
 buf.push("<a href=\"http://help.weibo.com/newtopic/e\" target=\"_blank\" class=\"W_fr\">");
 jade_debug.unshift({ lineno: undefined, filename: jade_debug[0].filename });
 jade_debug.unshift({ lineno: 8, filename: jade_debug[0].filename });
