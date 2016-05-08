@@ -9,13 +9,14 @@ var jade = require('jade');
 var del = require('del');
 var merge2 = require('merge2');
 var $ = require('gulp-load-plugins')();
-
+var react = require('gulp-react');
+var gutil = require('gulp-util');
 var port = 8101;
 // var port = 80;
 
 var build_path = 'build/';
 var cssfix_filter = {
-        prefix: true,
+        prefix: false,
         filter: ["components/**/*.*"]
     };
 
@@ -159,7 +160,7 @@ function dealSrc(isDebug, options) {
     ////
     // return result;
     //处理js
-    result = result.pipe(jsFilter)
+    result = result.pipe(jsFilter).pipe(react()).on('error', $.util.log)
         .pipe($.steelWrapAmd());
     if (!isDebug) {
         result = result.pipe($.steelAmdConcat())

@@ -23,6 +23,7 @@ steel.config({
     ajaxPath: '/',
     mainBox: mainBox,
     router: [
+            [pathnameAnalysis_online+'reactdemo', 'components/bluev/reactdemo/ctrl'],//React demo
             [pathnameAnalysis_online, 'components/bluev/main/ctrl'],//蓝V认证-认证首页
             [pathnameAnalysis_online + 'inputinfo', 'components/bluev/inputinfo/ctrl'],//蓝V认证-填写资料
             [pathnameAnalysis_online + 'protocol', 'components/bluev/protocol/ctrl'],//蓝V认证-step1同意协议

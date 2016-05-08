@@ -1,0 +1,16 @@
+.main h1{
+    padding:10px;
+    font-size:30px;
+    color:#fff;
+    height:100px;
+    text-align: center;
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(rgb(191, 114, 156)), to(rgb(191, 114, 156)));
+}
+.content{
+    padding:10px;
+    height:200px;
+    text-align: center;
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#2074af), to(#2c91d2));
+    color:#fff;
+    font-size: 24px;
+}
