@@ -7,7 +7,7 @@ module.exports = {
         "code": "100000",
         "msg": "succ",
         "data":{
-            "a":1
+            "focus" : 0
         }
     }
 };

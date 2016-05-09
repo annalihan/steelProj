@@ -1,0 +1,30 @@
+@charset 'utf-8';
+@import "common/public.css";
+@import "common/verifyNav.css";
+
+.protocol_content {
+    width: 980px;
+    margin: 58px auto;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+}
+.payinfo{padding:30px 0;border-top: 1px solid #f2f2f5;} 
+.payinfo .item{padding-left:320px;margin-bottom:30px;}
+.payinfo .dt{display:inline-block;width:65px;text-align: right;color:#808080;}
+.payinfo .dd{display:inline-block;margin-left:20px;color:#333333;}
+.payinfo .dd .option{display:inline-block;margin-right:10px;width:106px;height:28px;border:1px solid #ccc;text-align: center;line-height:30px;cursor: pointer;}
+.payinfo .dd .sel{position:relative;width:104px;height:26px;border:2px solid #ff8140;}
+.payinfo .dd .sel .icon{position: absolute;left: 0;top:0;width:18px;height:18px;background:url(img/selected_icon.png) center no-repeat;}
+.payinfo .dd .price{font-size:18px;color:#fa7d3c}
+.payinfo .dd del{color:#808080;margin:0 20px;}
+.payinfo .dd .notice{padding:3px 5px;border-radius:2px;background-color: #e91020;color:#fff;font-size:10px;}
+.payinfo .optBtn{margin-left:400px;}
+.payinfo .optBtn a{margin:0 5px;}
+.intro{margin:0 50px;padding:30px 0;border-top: 1px solid #f2f2f5;}
+.intro .item{float:left;margin-right:42px;width:142px;height:178px;text-align: center;}
+.intro .item:nth-child(5n){margin-right: 0}
+.intro .item img{display: block;margin:0 auto;}
+.intro .title{margin-top:5px;color:#333;font-size:14px;line-height:22px;}
+.intro p{color:#808080;line-height:22px;}
+
+#S_CSS_bluev_payinfo {height: 42px;}

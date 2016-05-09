@@ -33,6 +33,7 @@ steel.config({
             [pathnameAnalysis_online + 'identifysuccess', 'components/bluev/identifysuccess/ctrl'],//蓝V认证-认证成功
             [pathnameAnalysis_online + 'payinfo', 'components/bluev/payinfo/ctrl'],//蓝V认证-支付费用
             [pathnameAnalysis_online + 'identifyStatus', 'components/bluev/identifyStatus/ctrl'],//蓝V认证-等待审核
+            [pathnameAnalysis_online + 'unpaid', 'components/bluev/unpaid/ctrl']//蓝V认证-等待审核
     ]
 });
 

@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+@import "common/public.css";
+@import "common/verifyNav.css";
+
+body {
+	background: #c3d2de;
+	font-family: "Microsoft Yahei";
+}
+table {
+	font-family: "Microsoft Yahei";
+	font-size: 12px;
+}
+
+.infoconfirm {
+	width: 980px;
+	background: white;
+	margin: 0 auto;
+}
+.infoconfirm .info_detail {
+	border-top: 1px solid #f2f2f5;
+	padding: 16px 0;
+}
+.infoconfirm .info_detail th {
+	color: #a2a2a2;
+	vertical-align: top;
+	width: 180px;
+	line-height: 28px;
+	text-align: right;
+	padding: 0 18px 8px 0;
+}
+.infoconfirm .info_detail td {
+	line-height: 28px;
+	vertical-align: top;
+}
+.infoconfirm .info_detail td img {
+	max-height: 110px;
+	max-width: 148px;
+	margin-top: 8px;
+}
+
+#S_CSS_bluev_infoconfirm {
+    height: 42px;
+} 

@@ -2,7 +2,7 @@
  * author fangshu1@staff.weibo.com
  */
 
-//---常量定义区---------------------------------- 
+//---常量定义区----------------------------------
 require('utils/kit/dom/parseDOM');
 require('ui/alert');
 require('common/suda');
@@ -49,7 +49,7 @@ module.exports = function(node) {
     };
     //-------------------------------------------
 
-    //---Dom的获取方法定义区--------------------------- 
+    //---Dom的获取方法定义区---------------------------
     var parseDOM = function() {
         _this.DOM = $.utils.kit.dom.parseDOM($.builder(node).list);
     };

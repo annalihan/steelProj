@@ -1,6 +1,11 @@
 @charset 'utf-8';
+@import "../common/public.css";
 
 /*认证成功*/
+
+.W_input_error {
+    border: 1px solid;
+}
 
 .idetifysucc_content {
     width: 980px;
@@ -14,6 +19,60 @@
     line-height: 42px;
     padding: 0 16px;
     border-bottom: 1px solid #ececec;
+}
+
+.idetifysucc_content .indetify_wrap {
+    margin-bottom: 30px;
+}
+
+.idetifysucc_content .indetify_wrap .my_info {
+    margin-left: 75px;
+    margin-top: 16px;
+}
+
+.idetifysucc_content .indetify_wrap dl {
+    height: 32px;
+    line-height: 32px;
+}
+
+.idetifysucc_content .indetify_wrap dt {
+    color: #919191;
+    width: 100px;
+    float: left;
+    text-align: right;
+}
+
+.idetifysucc_content .indetify_wrap dd {
+    margin-left: 120px;
+    position: relative;
+}
+
+.idetifysucc_content .indetify_wrap dd .status {
+    margin-left: 20px;
+}
+
+.idetifysucc_content .indetify_wrap dd .verify {
+    color: #919191;
+}
+
+.idetifysucc_content .indetify_wrap dd .info_input {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.idetifysucc_content .indetify_wrap dd .close {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.idetifysucc_content .indetify_wrap dd .err_tip {
+    margin-left: 10px;
+}
+
+.idetifysucc_content .indetify_wrap dd .err_tip i {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
 }
 
 #S_CSS_bluev_identifysuccess {

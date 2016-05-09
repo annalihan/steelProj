@@ -1,2 +1,40 @@
-input(type="button",node-type="aj",value="aj测试")
-h2 认证首页
+.bluevmain
+  .bluev_header
+  .bluev_intro
+    .title 认证说明
+    .intro
+      p 1.  认证成功后，您将享有蓝V相应的权益。包括蓝V标识、主页装饰等功能及蓝V专属客户服务。
+      p 2.  蓝V认证将严格仔细确认资料的真实有效性，保护组织及平台用户的合法权益。
+      p 3.  选择蓝V认证分类时，请依据“组织机构代码证”上显示的机构类型进行选择。
+      p 4.  企业、机构分类认证需一次性支付
+        span.span_orange 300
+        | 元/次认证审核服务费，此为认证审核服务的成本费用。无论认证成功或失败，此费用都不退。
+      p 5.  微博站方支持政府、媒体、校园在微博平台提供优质信息和服务，特针对以上类型免收认证费用
+  .bluev_class
+    .title 认证类别
+    .class
+  .bluev_guide
+    .title 蓝V运营指南
+    .guide
+      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide1.jpg');", href="weibo.com")
+      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide2.jpg');", href="weibo.com")
+      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide3.jpg');", href="weibo.com")
+      a.guideimg(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide4.jpg');", href="weibo.com")
+  .bluev_help
+    .title 帮助与建议
+    .help
+      p 各类认证相关问题与建议请查看
+        span.span_orange 帮助中心
+        | ，微博将充分考虑用户的建议，为用户提供更满意的服务。如在申请中遇到问题，请私信
+        a(href="http://weibo.com/weibokefu") @微博客服
+        - if (focus == 1)
+          span.focus.W_btn_b
+            em.W_ficon.S_ficon.ficon_add +
+            | 关注
+        - else
+          span.focus.W_btn_b
+            em.W_ficon.S_ficon.ficon_right Y
+            | 已关注
+      p 个人真实身份认证，由
+        span.span_orange 国政通
+        |  提供支持。确保通过微博认证的个人用户均为真实的个人用户

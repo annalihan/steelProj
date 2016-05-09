@@ -1,0 +1,69 @@
+- if(!nickname_verify)
+    - var nicknamestatus = "none";
+- if(!vtitle_verify)
+    - var vtitlestatus = "none";
+.idetifysucc_content
+    .indetify_wrap
+        p.title.W_f14 我的认证
+        .my_info
+            dl
+                dt 认证类型
+                dd 企业蓝V
+            dl
+                dt 行业类别
+                dd #{industry_type}
+            dl
+                dt 微博名称
+                dd 
+                    p(node-type="nicknameDisplay")
+                        span(node-type="nicknameText") #{nickname}
+                        - if(nickname_edit)
+                            a.W_ficon.edit.status(href="javascript:void(0)",action-type="editInfo",action-data="type=nickname") 7 修改
+                        span.verify.status(style="display:#{nicknamestatus};") 审核中
+                    p.operate(style="display:none;",node-type="nickname")
+                        input.info_input(type="text",value="#{nickname}",get='http://sina.com',vmax='30',vmin='4',verify='acttype=notEmpty|format|ajax|max|min&errmsg=微博名称不能为空||此微博名称已被占用||长度为2-15个字')
+                        a.W_ficon(href="javascript:void(0)",action-type="right",action-data="type=nickname") B
+                        em.W_ficon.close(action-type="close",action-data="type=nickname") X
+                        span(errtip=1)
+            dl
+                dt 认证说明
+                dd 
+                    p(node-type="vtitleDisplay")
+                        span(node-type="vtitleText") #{vtitle}
+                        - if(vtitle_edit)
+                            a.W_ficon.edit.status(href="javascript:void(0)",action-type="editInfo",action-data="type=vtitle") 7 修改
+                        span.verify.status(style="display:#{vtitlestatus};") 审核中
+                    p.operate(style="display:none;",node-type="vtitle")
+                        input.info_input(type="text",value="#{vtitle}",vmax='60',verify='acttype=notEmpty|max&errmsg=认证说明不能为空||认证说明不能超过30个字')
+                        a.W_ficon(href="javascript:void(0)",action-type="right",action-data="type=vtitle") B
+                        em.W_ficon.close(action-type="close",action-data="type=vtitle") X
+                        span(errtip=1)
+            dl
+                dt 运营人
+                dd #{contact_name}
+            dl
+                dt 运营人联系方式
+                dd #{contact_mobile}
+            dl
+                dt 权益套餐
+                dd 
+                    - if(equity_package == 2)
+                        |初级套餐 ￥300/年
+                    - else if(equity_package == 3)
+                        |中级套餐 ￥5000/年
+                    - else
+                        |高级套餐 ￥9800/年
+            dl
+                dt 付款日期
+                dd #{pay_date}
+            dl
+                dt 交易单号
+                dd #{transition_id}
+            dl
+                dt 权益到期时间
+                dd #{overdue_date}
+            dl
+                dt 
+                dd 开具发票请联系
+                    a(href="http://weibo.com/u/3263330414",target="_blank") @微博广告
+    include common/legalRight

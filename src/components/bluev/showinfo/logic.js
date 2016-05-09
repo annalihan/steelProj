@@ -1,4 +1,9 @@
-//---常量定义区---------------------------------- 
+/**
+ * liufei5@staff.weibo.com
+ * 蓝V认证-确认信息页
+ */
+
+//---常量定义区----------------------------------
 require('utils/kit/dom/parseDOM');
 require('common/form/verify');
 require('common/bluevSelectData/enterprise');
@@ -6,24 +11,26 @@ require('common/bluevSelectData/enterprise');
 var $ = STK;
 var ADDRESSDATA = $.common.bluevSelectData.enterprise();
 
+var EMPTYSELECT = '<option value="">--请选择--</option>';
+
+var NAMEGUIDE = {
+    "1461": "请基于机构、场馆名称填写",
+    "2559": "请基于基于粉丝团名称填写",
+    "3490": "请基体育俱乐部名称填写",
+    "3495": "请基于基于明星工作室名称填写",
+};
+
+var INFOGUIDE = {
+    "1461": "说明为机构、场馆名，不要使用修饰性质的形容词。不超过30个字。",
+    "2559": "说明为粉丝团名，不要使用修饰性质的形容词。不超过30个字。",
+    "3490": "说明为球迷俱乐部名，不要使用修饰性质的形容词。不超过30个字。",
+    "3495": "说明为明星工作室名，不要使用修饰性质的形容词。不超过30个字。"
+};
+
 module.exports = function(node) {
 
     var documentFragment = document.createDocumentFragment();
-    var EMPTYSELECT = '<option value="">--请选择--</option>';
 
-    var NAMEGUIDE = {
-        "1461": "请基于机构、场馆名称填写",
-        "2559": "请基于基于粉丝团名称填写",
-        "3490": "请基体育俱乐部名称填写",
-        "3495": "请基于基于明星工作室名称填写",
-    };
-
-    var INFOGUIDE = {
-        "1461": "说明为机构、场馆名，不要使用修饰性质的形容词。不超过30个字。",
-        "2559": "说明为粉丝团名，不要使用修饰性质的形容词。不超过30个字。",
-        "3490": "说明为球迷俱乐部名，不要使用修饰性质的形容词。不超过30个字。",
-        "3495": "说明为明星工作室名，不要使用修饰性质的形容词。不超过30个字。"
-    };
     //---变量定义区---------------------------------
     var that = {};
     var draft;
@@ -48,7 +55,6 @@ module.exports = function(node) {
                         _this.DOM.nameGuide.innerHTML = NAMEGUIDE["1461"];
                         _this.DOM.infoGuide.innerHTML = INFOGUIDE["1461"];
                     }
-
                 }
             },
             addressSecondFun: function(e) {
@@ -68,9 +74,6 @@ module.exports = function(node) {
                     return;
                 }
                 _this.DOM.formInfo.submit();
-            },
-            floatTipFun:function(spec){
-                console.log(spec);
             }
         },
         bindFormFun: {
@@ -78,7 +81,7 @@ module.exports = function(node) {
             rules: {
                 format: function(el) {
                     var _value = el.value;
-                    var reg = /[^\w\d_\u4e00-\u9fa5]/g;
+                    var reg = /[^\w\d_\s\u4e00-\u9fa5]/g;
                     if (reg.test(_value)) {
                         return "只支持中英文，数字或者“_”";
                     }
@@ -111,7 +114,7 @@ module.exports = function(node) {
                 return tmpl;
             }
         },
-        switchText: function(value) {
+        switchText: function(value) { //切换机构类型
             switch (value) {
                 case "1461":
                     _this.DOM.nameGuide.innerHTML = NAMEGUIDE["1461"];
@@ -131,7 +134,7 @@ module.exports = function(node) {
                     break;
             }
         },
-        appendTypeList: function(spec, value) {
+        appendTypeList: function(spec, value) { //插入类型列表
             for (var i in $CONFIG["$second_type"][value]) {
                 var nOption = $.C('option');
                 nOption.innerHTML = $CONFIG["$second_type"][value][i];
@@ -141,7 +144,7 @@ module.exports = function(node) {
             _this.DOM[spec.data.target].innerHTML = '';
             _this.DOM[spec.data.target].appendChild(documentFragment);
         },
-        appendAddressList: function(e) {
+        appendAddressList: function(e) { //插入地址列表
             var oData = {};
             var aName = ADDRESSDATA['prov' + e.target.value].split(',');
             var aNum = ADDRESSDATA['code' + e.target.value].split(',');
@@ -167,7 +170,7 @@ module.exports = function(node) {
     };
     //-------------------------------------------
 
-    //---Dom的获取方法定义区--------------------------- 
+    //---Dom的获取方法定义区---------------------------
     var parseDOM = function() {
         _this.DOM = $.utils.kit.dom.parseDOM($.builder(node).list);
     };
@@ -197,7 +200,6 @@ module.exports = function(node) {
     //---代理事件绑定方法定义区------------------------
     var bindDelegatedEvt = function() {
         dvt.add('typeSelect', 'change', _this.DOM_eventFun.typeSelectFun);
-        dvt.add('floatTip', 'click', _this.DOM_eventFun.floatTipFun);
     };
 
     //---广播事件绑定方法定义区------------------------

@@ -91,9 +91,9 @@ function dealSrc(isDebug, options) {
         base: path.join(__dirname , src_base)
     };
     var htmlJadeFilter = $.filter('**/*.html.jade', {restore: true});
-    var jadeFilter = $.filter('**/*.jade', {restore: true});
+    var jadeFilter = $.filter(['**/*.jade','!js/**/*.jade'], {restore: true});
     var cssFilter = $.filter('**/*.css', {restore: true});
-    var jsFilter = $.filter(['**/*.js', '!lib/**/*.js'], {restore: true});
+    var jsFilter = $.filter(['**/*.js', '!js/**/*.js', '!lib/**/*.js'], {restore: true});
     var lib_concats = {
         'lib/lib.js': ['lib/steel.js', 'lib/theia.js', 'lib/seer.js', 'lib/debugConfig.js']
         // 'lib/lib.js': ['lib/steel.js', 'lib/jquery2.js', 'lib/steelConfig.js', 'lib/adaptive.js'],

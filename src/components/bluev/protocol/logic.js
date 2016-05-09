@@ -1,4 +1,9 @@
-//---常量定义区---------------------------------- 
+/**
+  * liufei5@staff.weibo.com
+  * 蓝V认证-协议确认页
+  */
+
+//---常量定义区----------------------------------
 require('utils/kit/dom/parseDOM');
 require('ui/alert');
 
@@ -15,7 +20,7 @@ module.exports = function(node) {
         objs: {}, //组件容器
         DOM_eventFun: {
             nextFun:function(){
-                if(!$.E('yes').checked) return; 
+                if(!$.E('yes').checked) return;
                 window.location.href="";
             }
         },
@@ -30,7 +35,7 @@ module.exports = function(node) {
     };
     //-------------------------------------------
 
-    //---Dom的获取方法定义区--------------------------- 
+    //---Dom的获取方法定义区---------------------------
     var parseDOM = function() {
         _this.DOM = $.utils.kit.dom.parseDOM($.builder(node).list);
     };

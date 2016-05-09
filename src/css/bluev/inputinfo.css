@@ -1,0 +1,213 @@
+@charset 'utf-8';
+@import "common/public.css";
+@import "common/verifyNav.css";
+body {
+    background: #c3d2de;
+    font-family: "Microsoft Yahei";
+}
+
+table {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+}
+
+.inputinfo {
+    width: 980px;
+    background: white;
+    margin: 0 auto;
+}
+
+.inputinfo .contact_info,
+.inputinfo .upload_file {
+    padding-bottom: 10px;
+}
+
+.inputinfo .item_title {
+    font-size: 12px;
+    line-height: 42px;
+    border-top: 1px solid #f2f2f5;
+    border-bottom: 1px solid #f2f2f5;
+    padding-left: 38px;
+}
+
+.inputinfo .item_input {
+    color: #919191;
+    margin: 12px 0;
+}
+
+.inputinfo .item_input th {
+    vertical-align: middle;
+    width: 118px;
+    line-height: 26px;
+    text-align: right;
+    padding: 8px 18px 8px 62px;
+}
+
+.inputinfo .item_input td {
+    width: 600px;
+    padding: 8px 0;
+    line-height: 18px;
+    position: relative;
+}
+
+.inputinfo .item_input input {
+    width: 500px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 5px;
+}
+
+.icon_succ {
+    vertical-align: text-bottom;
+}
+
+.inputinfo .item_input .btn_verify {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.inputinfo .item_input .formintro {
+    padding: 0 0 15px;
+}
+
+.inputinfo .item_input .twolineth {
+    line-height: 18px;
+}
+
+.inputinfo .item_input .contact_200 {
+    width: 200px;
+}
+
+.inputinfo .item_input .contact_150 {
+    width: 150px;
+}
+
+.inputinfo .item_input .contact_294 {
+    width: 294px;
+}
+
+.inputinfo .upload_file .item_input th {
+    vertical-align: top;
+}
+
+.inputinfo .upload_file .item_input td {
+    width: 608px;
+}
+
+.inputinfo .item_input .file_formintro {
+    display: inline-block;
+    width: 330px;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.inputinfo .item_input .icon_formintro {
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+.inputinfo .item_input .upload_img {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.inputinfo .item_input .imgbox {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+}
+
+.inputinfo .upload_w.uploaded .imgbox {
+    z-index: 3
+}
+
+.inputinfo .upload_w.uploaded:hover .W_btn_upload {
+    z-index: 4
+}
+
+.inputinfo .upload_w.uploaded .W_btn_upload {
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+.inputinfo .upload_w.uploaded .W_btn_upload .txt1 {
+    display: none
+}
+
+.inputinfo .upload_w.uploaded .W_btn_upload .W_btn_b {
+    display: none
+}
+
+.inputinfo .item_input .imgbox img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0
+}
+
+
+.inputinfo .item_input p {
+    line-height: 16px;
+    margin-top: 20px;
+}
+
+.inputinfo .item_input .btn_upload {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.inputinfo .item_input .W_btn_upload {
+    width: 110px;
+    height: 60px;
+    color: #8a8a8a;
+    text-align: center;
+    font-size: 12px;
+    padding: 25px 0;
+    line-height: normal;
+    position: relative;
+    z-index: 2;
+    display:inline-block;
+    background: #f2f2f5;
+}
+
+.inputinfo .item_input .W_btn_upload .txt2{
+	display: none;
+	color: #fff;
+}
+
+.inputinfo .upload_w.uploaded .W_btn_upload .txt2 {
+    display: block;
+    padding-top: 20px
+}
+
+.inputinfo .item_input .W_btn_upload .W_btn_b {
+	margin-top: 18px;
+}
+
+.inputinfo .item_input .uploaded {
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 110px;
+    float: left;
+}
+
+.inputinfo .item_input .file_preview {
+    max-height: 110px;
+    max-width: 148px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+#S_CSS_bluev_inputinfo {
+    height: 42px;
+}

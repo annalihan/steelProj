@@ -1,0 +1,127 @@
+div.infoconfirm
+    include common/top_position
+    include common/verifyNav
+    .info_detail
+        table
+            - if (dapart == "enterprise")
+                tbody
+                    tr
+                        th 企业名称
+                        td #{realname}
+                    tr
+                        th 营业执照注册号
+                        td #{regnumber}
+                    tr
+                        th 法定代表人/企业负责人姓名
+                        td #{legalperson}
+                    tr
+                        th 运营者姓名
+                        td #{contact_name}
+                    tr
+                        th 运营者身份证号码
+                        td #{identity_id}
+                    tr
+                        th 运营者手机号码
+                        td #{contact_mobile}
+                    tr
+                        th 运营者座机
+                        td #{contact_tel}
+                    tr
+                        th 电子邮箱
+                        td #{email}
+                    tr
+                        th 企业工商营业执照
+                        td
+                            img.file_preview(src="#{file_1_rec}")
+                    tr
+                        th 认证公函
+                        td
+                            img.file_preview(src="#{file_2_rec}")
+                    tr
+                        th 商标注册证
+                        td
+                            img.file_preview(src="#{file_3_rec}")
+                    tr
+                        th 网站ICP备案查询截图
+                        td
+                            img.file_preview(src="#{file_4_rec}")
+                    tr
+                        th 软件著作证
+                        td
+                            img.file_preview(src="#{file_5_rec}")
+                    tr
+                        th 其他材料
+                        td
+                            img.file_preview(src="#{file_6_rec}")
+            - if (dapart == "group")
+                tbody
+                    tr
+                        th 组织机构名称
+                        td #{realname}
+                    tr
+                        th 组织机构代码
+                        td #{organization_code}
+                    tr
+                        th 运营者姓名
+                        td #{contact_name}
+                    tr
+                        th 运营者身份证号码
+                        td #{identity_id}
+                    tr
+                        th 运营者手机号码
+                        td #{contact_mobile}
+                    tr
+                        th 运营者座机
+                        td #{contact_tel}
+                    tr
+                        th 电子邮箱
+                        td #{email}
+                    tr
+                        th 组织机构代码证
+                        td
+                            img.file_preview(src="#{file_1_rec}")
+                    - if (class_id == "group")
+                        tr
+                            th 认证公函
+                            td
+                                img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th 宗教场所登记证
+                            td
+                                img.file_preview(src="#{file_3_rec}")
+                        tr
+                            th 其他材料
+                            td
+                                img.file_preview(src="#{file_4_rec}")
+                    - if (class_id == "fans")
+                        tr
+                            th 粉丝团认证公函
+                            td
+                                img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th 其他材料
+                            td
+                                img.file_preview(src="#{file_3_rec}")
+                    - if (class_id == "sports")
+                        tr
+                            th 认证公函
+                            td
+                                img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th 球迷俱乐部授权书
+                            td
+                                img.file_preview(src="#{file_3_rec}")
+                        tr
+                            th 其他材料
+                            td
+                                img.file_preview(src="#{file_4_rec}")
+                    - if (class_id == "starstudio")
+                        tr
+                            th 认证公函
+                            td
+                                img.file_preview(src="#{file_2_rec}")
+                        tr
+                            th 其他材料
+                            td
+                                img.file_preview(src="#{file_3_rec}")
+    include common/footer

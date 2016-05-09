@@ -1,0 +1,129 @@
+.showinfo_content
+    include common/top_position
+    include common/verifyNav
+    .form_display
+        .form.W_fl
+            form(action='',method='get',node-type='formInfo')
+                - if(dapart == 'group')
+                    dl.select
+                        dt 机构类别
+                        dd.trade_type
+                            select.select_option(node-type='agencyFirst',action-type='typeSelect',action-data='target=agencySecond',name='s_class_id',verify='acttype=notEmpty&sucmsg=true&errmsg=机构类别不能为空')
+                                option(value='') --请选择--
+                                option(value='1461') 机构场所
+                                option(value='2559') 粉丝团
+                                option(value='3490') 体育团体
+                                option(value='3495') 明星工作
+                            select.select_option(node-type='agencySecond',name='b_class_id',verify='acttype=notEmpty&sucmsg=true&errmsg=机构类别不能为空')
+                                option(value='') --请选择--
+                            span(errtip=1)
+                dl
+                    dt.nickname_text 
+                        label(for='nickname') 微博名称
+                    dd.err_tip
+                        - if(dapart == 'enterprise')
+                            - var err_tip = '请输入企业官方微博名'
+                        - else if(dapart == 'group')
+                            - var err_tip = '请输入机构官方微博名'
+                        input#nickname.nickname(name='nickname',type='text',value='#{nickname}',vmax='30',vmin='4',node-type='nickname',get='http://sina.com',verify='acttype=notEmpty|format|ajax|max|min&sucmsg=true&errmsg=#{err_tip}||此微博名称已被占用||长度为2-15个字')
+                        span(errtip=1)
+                dl
+                    dd.explain(node-type='nameGuide')
+                        - if(dapart == 'enterprise')
+                            |请基于公司或品牌名填写公司或品牌的全称或无歧义简称
+                        - else if(dapart == 'group')
+                            |请基于机构、场馆名称填写
+                dl
+                    dt 
+                        label(for='info') 认证信息
+                    dd.textarea_wrap.err_tip
+                        - if(dapart == 'enterprise')
+                            - var placeholder = '示例：新浪网官方微博';
+                        - else if(dapart == 'group')
+                            - var placeholder = '示例：（机构、场所）官方微博';
+                        textarea#info.vtitle(name='vtitle',node-type='verifyInfo',vmax='60',verify='acttype=notEmpty|max&sucmsg=true&errmsg=认证信息不能为空||认证信息不能超过30个字',placeholder='#{placeholder}') #{vtitle}
+                        span(errtip=1)
+                dl
+                    dd.explain.dubble_text(node-type='infoGuide')
+                        - if(dapart == 'enterprise')
+                            |说明为公司名，不要使用修饰性质的形容词。体现企业品牌需提交商标注册证。不超过30个字。
+                        - else if(dapart == 'group')
+                            |说明为机构、场馆名，不要使用修饰性质的形容词。不超过30个字。
+                - if(dapart == 'enterprise')
+                    dl.select
+                        dt 行业类别
+                        dd.trade_type
+                            select.select_option(node-type='industryFirst',action-type='typeSelect',action-data='target=industrySecond',name='s_class_id',verify='acttype=notEmpty&sucmsg=true&errmsg=行业类别不能为空')
+                                option(value='') --请选择--
+                                option(value='1562') IT/互联网/电子产品
+                                option(value='1521') 商务服务
+                                option(value='1478') 餐饮美食
+                                option(value='1634') 食品饮料
+                                option(value='1619') 美容美发/彩妆卫浴
+                                option(value='1532') 休闲娱乐
+                                option(value='1607') 服饰/箱包/运动户外
+                                option(value='1491') 生活服务
+                                option(value='1554') 文化体育
+                                option(value='1540') 旅游酒店
+                                option(value='1513') 教育出国
+                                option(value='1593') 金融服务
+                                option(value='1502') 医疗健康企业
+                                option(value='1600') 汽车交通
+                                option(value='1547') 商场购物
+                                option(value='1628') 房产家居/装饰
+                                option(value='1580') 通讯服务
+                                option(value='1641') 工农贸易
+                                option(value='1649') 其它
+                            select.select_option(node-type='industrySecond',name='b_class_id',verify='acttype=notEmpty&sucmsg=true&errmsg=行业类别不能为空')
+                                option(value='') --请选择--
+                            span(errtip=1)
+                dl.select
+                    dt 所在地
+                    dd
+                        select.select_option(node-type='addressFirst',name='areaType')
+                            option(value='1') 中国大陆
+                        select.select_option(node-type='addressSecond',name='province',verify='acttype=notEmpty&sucmsg=true&errmsg=请选择机构所在地')
+                            option(value='') --请选择--
+                            option(value='34') 安徽
+                            option(value='11') 北京
+                            option(value='50') 重庆
+                            option(value='35') 福建
+                            option(value='62') 甘肃
+                            option(value='44') 广东
+                            option(value='45') 广西
+                            option(value='52') 贵州
+                            option(value='46') 海南
+                            option(value='13') 河北
+                            option(value='23') 黑龙江
+                            option(value='41') 河南
+                            option(value='42') 湖北
+                            option(value='43') 湖南
+                            option(value='15') 内蒙古
+                            option(value='32') 江苏
+                            option(value='36') 江西
+                            option(value='22') 吉林
+                            option(value='21') 辽宁
+                            option(value='64') 宁夏
+                            option(value='63') 青海
+                            option(value='14') 山西
+                            option(value='37') 山东
+                            option(value='31') 上海
+                            option(value='51') 四川
+                            option(value='12') 天津
+                            option(value='54') 西藏
+                            option(value='65') 新疆
+                            option(value='53') 云南
+                            option(value='33') 浙江
+                            option(value='61') 陕西
+                            option(value='1000') 其他
+                        select.select_option(node-type='addressThird',name='city',verify='acttype=notEmpty&sucmsg=true&errmsg=请选择机构所在地')
+                            option(value='') --请选择--
+                        span(errtip=1)
+        .display.W_fr
+            p.photo
+                img.pic(src='#{profile_img}')
+            i.W_icon.icon_pf_approve_co
+            .display_text
+                p.W_f22.nickname(node-type='nickname') #{nickname}
+                p.vtitle(node-type='verifyInfo') #{vtitle}
+    include common/footer

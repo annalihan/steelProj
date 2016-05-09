@@ -14,7 +14,7 @@
 .payinfo .dd{display:inline-block;margin-left:20px;color:#333333;}
 .payinfo .dd .option{display:inline-block;margin-right:10px;width:106px;height:28px;border:1px solid #ccc;text-align: center;line-height:30px;cursor: pointer;}
 .payinfo .dd .sel{position:relative;width:104px;height:26px;border:2px solid #ff8140;}
-.payinfo .dd .sel .icon{position: absolute;left: 0;top:0;width:18px;height:18px;background:url(../common/img/selected_icon.png) center no-repeat;}
+.payinfo .dd .sel .icon{position: absolute;left: 0;top:0;width:18px;height:18px;background:url(img/selected_icon.png) center no-repeat;}
 .payinfo .dd .price{font-size:18px;color:#fa7d3c}
 .payinfo .dd del{color:#808080;margin:0 20px;}
 .payinfo .dd .notice{padding:3px 5px;border-radius:2px;background-color: #e91020;color:#fff;font-size:10px;}

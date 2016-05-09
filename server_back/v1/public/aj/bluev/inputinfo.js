@@ -8,7 +8,7 @@ module.exports = {
         "msg": "succ",
         "data":{
             "step": 3,
-            "dapart" : "enterprise",
+            "vtype" : "enterprise",
             "class_id" : "starstudio",
             "realname" : "企业名称",
             "regnumber" : "营业执照注册号",

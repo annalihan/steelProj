@@ -1,4 +1,4 @@
-//---常量定义区---------------------------------- 
+//---常量定义区----------------------------------
 require('utils/kit/dom/parseDOM');
 require('ui/alert');
 require('common/suda');
@@ -7,6 +7,38 @@ require('ui/dialog');
 require('ui/confirm');
 require('ui/bubble');
 var $ = STK;
+
+//支付弹出层模版
+var PAYING_TEMP =
+    '<div class="layer_point">\
+        <div>\
+            <p class=" W_f14 W_texta">请在新开页面进行支付，支付完成前请不要关闭该窗口。</p>\
+        </div>\
+    </div>\
+    <div class="W_layer_btn S_bg1">\
+        <a href="javascript:void(0);" class="W_btn_a btn_34px" node-type="ok"><span>付款成功</span></a>\
+        <a href="javascript:void(0);" class="W_btn_b btn_34px" node-type="cancel"><span>放弃付款</span></a>\
+    </div>';
+var COMFIRM_TEMP =
+    '<div class="layer_point">\
+        <div>\
+            <p class=" W_f14 W_texta">还没有收到您的支付信息，请确认是否付款成功。</p>\
+        </div>\
+    </div>\
+    <div class="W_layer_btn S_bg1">\
+        <a href="javascript:void(0);" class="W_btn_a btn_34px" node-type="ok"><span>付款成功</span></a>\
+        <a href="javascript:void(0);" class="W_btn_b btn_34px" node-type="cancel"><span>放弃付款</span></a>\
+    </div>';
+var CANCEL_TEMP =
+    '<div class="layer_point">\
+        <div>\
+            <p class=" W_f14 W_texta">确定要取消本次认证？</p>\
+        </div>\
+    </div>\
+    <div class="W_layer_btn S_bg1">\
+        <a href="javascript:void(0);" class="W_btn_a btn_34px" node-type="ok"><span>确定</span></a>\
+        <a href="javascript:void(0);" class="W_btn_b btn_34px" node-type="cancel"><span>取消</span></a>\
+    </div>';
 
 module.exports = function(node) {
     //---变量定义区---------------------------------
@@ -34,16 +66,27 @@ module.exports = function(node) {
                 _this.DOM.notice.innerHTML = '返3000现金红包';
                 _this.DOM.item01.setAttribute('src','temp02.png');
             },
-            payFun:function(){                 
-                var opts = {
-                    ok : $.empty,
-                    cancel : $.empty,
-                    content : '',
-                    okTxt : '付款成功',
-                    cancelTxt : '放弃付款',
-                    speed: 0
-                };
-                var confirm = $.ui.confirm('请在新开页面进行支付，支付完成前请不要关闭该窗口。', opts);
+            payFun:function(){
+                _this.objs.confirmDia = $.ui.dialog();
+                _this.objs.confirmDia.setTitle('');
+                _this.objs.confirmDia.setContent(PAYING_TEMP);
+                _this.objs.confirmDia.show().setMiddle();
+                var confirmDOM = $.utils.kit.dom.parseDOM($.builder(_this.objs.confirmDia.getInner()).list) || {};
+                $.addEvent(confirmDOM.cancel, 'click', function() {
+                    _this.objs.confirmDia.hide();
+                });
+                $.addEvent(confirmDOM.ok, 'click', function() {
+                    _this.objs.confirmDia.hide();
+                    var opts = {
+                        ok : $.empty,
+                        cancel : $.empty,
+                        content : '',
+                        okTxt : '确定',
+                        cancelTxt : '取消',
+                        speed: 0
+                    };
+                    var confirm = $.ui.confirm('取消成功', opts);
+                });
             }
         },
         ajFun: {
@@ -57,7 +100,7 @@ module.exports = function(node) {
     };
     //-------------------------------------------
 
-    //---Dom的获取方法定义区--------------------------- 
+    //---Dom的获取方法定义区---------------------------
     var parseDOM = function() {
         _this.DOM = $.utils.kit.dom.parseDOM($.builder(node).list);
     };

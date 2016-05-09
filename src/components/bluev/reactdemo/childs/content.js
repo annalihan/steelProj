@@ -1,8 +1,15 @@
 module.exports=React.createClass({
+    build:function(){
+      console.log(this.refs);
+      return <p>build</p>;
+    },
+
+
     render:function(){
         return(
-            <div className="content">
-                <p>This is Child Component !</p>
+            <div ref="content" className="content" style={{fontSize:"none"}}>
+                <p>{this.props.data}</p>
+                {this.build()}
             </div>
         );
     }
