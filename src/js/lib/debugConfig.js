@@ -1,4 +1,0 @@
-;
-steel.config({
-  debug: true
-});
