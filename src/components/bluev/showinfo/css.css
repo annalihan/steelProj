@@ -5,6 +5,7 @@
 /*确认展示信息*/
 
 .showinfo_content {
+    background: #fff;
     width: 980px;
     margin: 58px auto;
     border: 1px solid #ececec;
@@ -38,10 +39,10 @@
 .showinfo_content .form .nickname,
 .showinfo_content .form .vtitle {
     width: 346px;
-    padding:0 10px;
+    padding: 0 10px;
 }
 
-.showinfo_content .form .err_tip{
+.showinfo_content .form .err_tip {
     position: relative;
 }
 
@@ -137,6 +138,6 @@
     margin-right: 10px;
 }
 
-#S_CSS_bluev_showinfo {
+#S_CSS_components_bluev_showinfo_css {
     height: 42px;
 }

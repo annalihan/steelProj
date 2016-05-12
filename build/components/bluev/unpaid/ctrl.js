@@ -1,0 +1,1 @@
+steel.d("components/bluev/unpaid/ctrl",[],function(t,c,l){l.exports=function(t){t.set({data:"/v1/public/aj/bluev/unpaid",tpl:"./tpl",logic:"./logic",css:"./css"})}});

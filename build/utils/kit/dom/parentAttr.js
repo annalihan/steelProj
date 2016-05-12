@@ -1,0 +1,1 @@
+steel.d("utils/kit/dom/parentAttr",[],function(t,r,e){STK.register("utils.kit.dom.parentAttr",function(t){return function(t,r,e){var n;if(t&&r)for(e=e||document.body;t&&t!=e&&!(n=t.getAttribute(r));)t=t.parentNode;return n}})});

@@ -1,0 +1,1 @@
+steel.d("utils/kit/dom/next",[],function(e,t,n){STK.register("utils.kit.dom.next",function(e){var t=e.core.dom.next;return function(e){var n=Array.prototype.slice.apply(arguments);if(n.length>1){var r=t(e),i=[];if(n[1]>=1){do n[1]--,1===r.nodeType&&i.push(r);while(n[1]>0&&(r=t(r)))}else do 1===r.nodeType&&i.push(r);while(r=t(r));return i}return t(e)}})});

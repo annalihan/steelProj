@@ -1,0 +1,1 @@
+steel.d("utils/kit/extra/parseURL",[],function(r,t,e){STK.register("utils.kit.extra.parseURL",function(r){return function(){return STK.historyM&&STK.historyM.parseURL?STK.historyM.parseURL():url=r.core.str.parseURL(location.href)}})});

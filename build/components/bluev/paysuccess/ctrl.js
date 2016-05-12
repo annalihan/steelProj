@@ -1,0 +1,1 @@
+steel.d("components/bluev/paysuccess/ctrl",[],function(c,s,t){t.exports=function(c){c.set({data:"/v1/public/aj/bluev/paysuccess",tpl:"./tpl",logic:"./logic"})}});

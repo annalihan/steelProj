@@ -1,0 +1,1 @@
+steel.d("components/bluev/protocol/ctrl",[],function(o,t,c){c.exports=function(o){o.set({data:"/v1/public/aj/bluev/protocol",tpl:"./tpl",logic:"./logic",css:"./css"})}});

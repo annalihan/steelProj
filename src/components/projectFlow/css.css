@@ -1,0 +1,330 @@
+/*.wrapper p{
+    line-height: 1;
+}*/
+.wrapper{
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow:2px 0px 3px #ccc;
+}
+.sliderOuterWrapper{
+    margin-bottom: 0;
+    box-shadow: none;
+}
+.sliderOuter{
+    /*margin: 1.01rem 1.2rem;*/
+}
+.itemWrapper{
+    display: block;
+}
+.textWrapper{
+    margin: 1rem 1.2rem;
+}
+.sliderWrapper{
+    margin: -1px 0 0;
+}
+.imgWrapper{
+    position: relative;
+    width: 100%;
+    /*height: 16rem;*/
+    overflow: hidden;
+    /*background-position: 50% 50%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100%;*/
+}
+.project_pic{
+    width: 100%;
+}
+.typeFlagWrapper{
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+    height: 3rem;
+}
+.typeFlagBefore, .typeFlag, .typeFlagAfter{
+    display: inline-block;
+}
+.typeFlagBefore{
+    position: absolute;
+    left: -0.7rem;
+    width: 0.7rem;
+    height: 3rem;
+}
+.typeFlagAfter{
+    position: absolute;
+    /*right: -0.7rem;*/
+    width: 0.6rem;
+    height: 1.6rem;
+}
+.typeFlagffa200{
+    background: #ffa200;
+}
+.typeFlagf26d5f{
+    background: #f26d5f;
+}
+.typeFlagBeforeffa200{
+    background: url(./img/flag_ffa200_before.png) 0 0 no-repeat;
+    background-size: 1rem 1.6rem;
+}
+.typeFlagAfterffa200{
+    background: url(./img/flag_ffa200_after.png) 100% 100% no-repeat;
+    background-size: 1rem 1.6rem;
+}
+.typeFlagAfterf26d5f{
+    margin-left: -1px;
+    background: url(./img/flag_f26d5f_after.png) 100% 100% no-repeat;
+    background-size: 0.6rem 100%;
+}
+.typeFlag{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    /*width: 3.25rem;*/
+    height: 1.6rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+.btn_subWeiBo_bg{
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    background: rgba(0,0,0,0.35);
+    top: -3.5rem;
+    right: -3.5rem;
+    border-radius: 50%;
+}
+.btn_subWeiBo{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 1.3rem;
+    bottom:1.2rem;
+    width: 1.6rem;
+    height: 1.65rem;
+    background: url(./img/btn_share_new.png) 0 0 no-repeat;
+    background-size: 1.6rem auto;
+}
+.projectImg{
+    width: 100%;
+}
+.titleWrapper{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0 2.35rem;
+    overflow: hidden;
+}
+.projectName{
+    /*display: block;*/
+    /*float: left;*/
+    width: 87%;
+    height: 1.7rem;
+    padding-top: 0.1rem;
+    margin-bottom: 0;
+    overflow: hidden;
+    font-size: 1.4rem;
+    line-height: 1;
+    color:#333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.collect_wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1.1rem;
+    /*border-left: 1px solid #ccc;*/
+    /*float: right;*/
+}
+.btn_collect:hover, .btn_collected:hover{
+    color: #999;
+}
+.btn_collect, .btn_collected{
+    display: block;
+    /*content: '';*/
+    width: 1.6rem;
+    height: 1.4rem;
+    /*margin: 0 auto;*/
+    /*margin-bottom: 0.4rem;*/
+    /*float: right;*/
+    /*margin:0.3rem 1rem 0 0;*/
+    color: #999;
+    /*position: relative;*/
+}
+/*.btn_collect:before, .btn_collect:before{
+    content: '';
+    height: 1.6rem;
+    width: 1px;
+    background: #e6e6e6;
+    position: absolute;
+    right: 2.6rem;
+}*/
+.btn_collect{
+    background: url(./img/btn_collect.png) 0 0 no-repeat;
+    background-size: cover;
+}
+.btn_collected{
+    background: url(./img/btn_collect.png) 100% 0% no-repeat;
+    background-size: cover;
+}
+.projectInfoWrapper{
+    overflow: hidden;
+    margin-top: 0.8rem;
+    position: relative;
+}
+.projectInfoTextWrapper{
+    /*border-right: 1px solid #e6e6e6;*/
+            /*box-shadow:-1px 0px 1px -1px #aaa inset;*/
+    /*-webkit-box-shadow:-1px 0px 1px -1px #aaa inset;*/
+}
+.projectInfoTextWrapper:last-child{
+    border-right: none;
+    box-shadow: 0 0 0 0 #fff inset;
+}
+.projectInfoLeft{
+    /*float: left;*/
+}
+.projectInfoRight{
+    /*float: right;*/
+}
+.projectInfoCenter{
+    /*float: none;*/
+}
+.projectInfoText{
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+    color:#333;
+}
+.projectInfoText .moneyUnit{
+    font-size: 0.9rem;
+}
+.projectInfoLabel{
+    margin-bottom:0;
+    color: #939393;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    height: 1.2rem;
+}
+.noDis{
+    display: none;
+}
+.priceWrapper{
+    display: block;
+    margin:1rem 0;
+}
+.priceTitle{
+    color:#939393;
+    font-size: 1.4rem;
+}
+.price{
+    font-size: 1.4rem;
+    color:#f46200;
+}
+.priceNum{
+    font-style: normal;
+    font-size: 2rem;
+}
+.progressWrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+}
+.progress{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 0.2rem;
+    background: #dedede;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+.progressShape{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 0.2rem;
+    max-width: 100%;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    background:-webkit-gradient(linear, left top, right top, from(#fca577), to(#f26d5f));
+}
+.progressText{
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    width: 10.1%;
+    margin-top: -0.7rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    border: 1px solid #f26d5f;
+    border-radius: 0.8rem;
+    background: #fff;
+    color: #f26d5f;
+    font-size: 1rem;
+    text-align: center;
+}
+.progressTextUnit{
+    font-size: 0.8rem;
+    display:inline-block;
+}
+.progressText_grey{
+    border: 1px solid #f26d5f;
+    border-radius: 0.8rem;
+    display:inline-block;
+    color: #939393;
+    border: 1px solid #dedede;
+}
+.progressText_out{
+    color: #fff;
+    background: #f26d5f;
+}
+.projectState{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5.5rem;
+    height: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+.projectText{
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.leftDays{
+    /*display: block;*/
+}
+.projectIcons{
+    display: inline-block;
+    /*position: relative;*/
+    /*top: 0.05rem;*/
+    width: 1rem;
+    height: 1rem;
+    /*vertical-align: 0;*/
+    margin-right:0.2rem;
+}
+.projectIcons.projectIconsPeople{
+    background: url(./img/projects_icon_people.png) no-repeat;
+    background-size: contain;
+}
+.projectIcons.projectIconsTime{
+    background: url(./img/projects_icon_time.png) no-repeat;
+    background-size: contain;
+}
+.projectIcons.projectIconsMoney{
+    background: url(./img/projects_icon_money.png) no-repeat;
+    background-size: contain;
+}
+
+
+/*patch*/
+.icon_people_patch { padding-right: 0.1rem }

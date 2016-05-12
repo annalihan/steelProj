@@ -17,7 +17,9 @@
 .unpaidContent table{width:750px;margin:25px auto 35px;text-align: center;border:1px solid #f2f2f5;}
 .unpaidContent table thead tr{background-color:#f2f2f5;}
 .unpaidContent table thead th{padding:12px;text-align: center;}
-.unpaidContent table tbody td{padding:20px;}
-.unpaidContent table tbody .status{color:#808080;}
+.unpaidContent table tbody td{vertical-align:top;padding:20px 20px 5px;}
+.unpaidContent table .status{color:#808080;}
+.unpaidContent table .option{text-align: center;}
+.unpaidContent table .option a{display: block;margin-bottom:15px;}
 
-#S_CSS_bluev_unpaid {height: 42px;}
+#S_CSS_components_bluev_unpaid_css{height: 42px;}

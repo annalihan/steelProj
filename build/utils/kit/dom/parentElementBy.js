@@ -1,0 +1,1 @@
+steel.d("utils/kit/dom/parentElementBy",[],function(r,e,t){STK.register("utils.kit.dom.parentElementBy",function(r){return function(r,e,t){if(!r||!e)throw new Error("传入的参数为空");var n,i=0;for(r=r.parentNode;r.parentNode;){if(i++,n=t(r),n===!1)return!1;if(n===!0)return r;if(n===e)return null;if(r=r.parentNode,i>3e4)return!1}return null}})});

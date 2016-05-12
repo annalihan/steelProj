@@ -1,0 +1,1 @@
+steel.d("components/bluev/payinfo/ctrl",[],function(t,c,l){l.exports=function(t){t.set({data:"/v1/public/aj/bluev/payinfo",tpl:"./tpl",logic:"./logic",css:"./css"})}});

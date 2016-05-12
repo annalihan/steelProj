@@ -10,7 +10,7 @@ $Import('utils.kit.dom.drag');
 
 STK.register('ui.dialog',function($){
     var TEMP = '' +
-    '<div class="W_layer W_layer_pop" node-type="outer" style="display:none;position:absolute;z-index:10019">'+
+    '<div class="W_layer" node-type="outer" style="display:none;position:absolute;z-index:10019">'+
         '<div class="content">'+
             '<div class="W_layer_title" node-type="title_content"></div>'+
             '<div class="W_layer_close"><a href="javascript:void(0);" class="W_ficon ficon_close S_ficon" title="#L{关闭}" node-type="close">X</a></div>'+

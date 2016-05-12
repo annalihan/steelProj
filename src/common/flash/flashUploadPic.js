@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @id $.comp.edit.flashUploadPic
  * @param {Object} node 组件最外节点
  * @return {Object} 实例
@@ -8,7 +8,7 @@
  *
  */
 $Import('utils.kit.extra.language');
-$Import('common.flash.multiFileUpload');
+$Import('common.flash.fileUpload');
 
 STK.register('common.flash.flashUploadPic', function($){
 
@@ -79,14 +79,14 @@ STK.register('common.flash.flashUploadPic', function($){
 			if(_conf.isSetRelative){
 				dom.style.position = 'relative';
 			}
-				
+
 			pdiv.setAttribute('node-type', 'cropper');
 			pdiv.style.cssText = 'position:absolute;left:0;top:0;display:block;overflow:hidden;filter:alpha(opacity=0);opacity:0;-moz-opacity:0;z-index:90';
 			pdiv.style.width = _conf.w + "px";
 			pdiv.style.height = _conf.h + "px";
 
 			try {
-				_this.objs.uploader = $.common.flash.multiFileUpload(_conf);
+				_this.objs.uploader = $.common.flash.fileUpload(_conf);
 			} catch (e) {
 				$.log("error:", e.message);
 			}
@@ -110,11 +110,11 @@ STK.register('common.flash.flashUploadPic', function($){
 
 		//+++ 组件公开属性或方法的赋值区 ++++++++++++++++++
 		that.destroy = destroy;
-		
+
 		//-------------------------------------------
 
 
 		return that;
 	};
-	
+
 });

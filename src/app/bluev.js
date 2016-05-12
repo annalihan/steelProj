@@ -22,13 +22,14 @@ steel.config({
     cssPath: 'http://js.t.sinajs.cn/t6/business/',
     ajaxPath: '/',
     mainBox: mainBox,
+    useCssPrefix: false,
     router: [
-            [pathnameAnalysis_online+'reactdemo', 'components/bluev/reactdemo/ctrl'],//React demo
+            ['/home', 'components/home/ctrl'],
             [pathnameAnalysis_online, 'components/bluev/main/ctrl'],//蓝V认证-认证首页
-            [pathnameAnalysis_online + 'inputinfo', 'components/bluev/inputinfo/ctrl'],//蓝V认证-填写资料
+            [pathnameAnalysis_online + 'inputinfo', 'components/bluev/inputinfo/ctrl'],//蓝V认证-step3填写资料
             [pathnameAnalysis_online + 'protocol', 'components/bluev/protocol/ctrl'],//蓝V认证-step1同意协议
             [pathnameAnalysis_online + 'showinfo', 'components/bluev/showinfo/ctrl'],//蓝V认证-step2确认展示信息
-            [pathnameAnalysis_online + 'infoconfirm', 'components/bluev/infoconfirm/ctrl'],//蓝V认证-信息确认
+            [pathnameAnalysis_online + 'infoconfirm', 'components/bluev/infoconfirm/ctrl'],//蓝V认证-step4信息确认
             [pathnameAnalysis_online + 'paysuccess', 'components/bluev/paysuccess/ctrl'],//蓝V认证-支付成功
             [pathnameAnalysis_online + 'identifysuccess', 'components/bluev/identifysuccess/ctrl'],//蓝V认证-认证成功
             [pathnameAnalysis_online + 'payinfo', 'components/bluev/payinfo/ctrl'],//蓝V认证-支付费用
@@ -46,6 +47,7 @@ steel.on('stageChange', function(node){
 //监听error事件
 
 steel.on('renderError', function(node){
+    console.log('renderError');
     dataErr = errFn(pathnameAnalysis_online + 'main');
     timer = dataErr.timer;
 });

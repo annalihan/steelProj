@@ -1,0 +1,1 @@
+steel.d("utils/kit/dom/hasClass",[],function(t,e,s){STK.register("utils.kit.dom.hasClass",function(t){var e=document.documentElement,s=e.hasAttribute?"class":"className";return function(t,e){var n,i=!1;return t&&e&&(n=t.getAttribute(s)||"",i=e.exec?e.test(n):e&&(" "+n+" ").indexOf(" "+e+" ")>-1),i}})});

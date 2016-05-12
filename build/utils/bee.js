@@ -1,0 +1,1 @@
+steel.d("utils/bee",[],function(e,i,n){n.exports={log:function(e,i,n,o){return n=n||"error",o=o||"e",window.bee&&window.bee[n]?window.bee[n]("["+e+"] "+i,o):void 0},timing:function(e,i){return window.bee&&window.bee.timing?window.bee.timing(e,i):void 0}}});

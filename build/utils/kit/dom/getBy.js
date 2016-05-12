@@ -1,0 +1,1 @@
+steel.d("utils/kit/dom/getBy",[],function(t,e,n){STK.register("utils.kit.dom.getBy",function(t){return function(t,e,n){if(e=e||"*",!n)return[];for(var r=[],i=n.getElementsByTagName(e),u=0,g=i.length;g>u;++u)t(i[u])&&(r[r.length]=i[u]);return r}})});

@@ -56,9 +56,20 @@ table {
     line-height: 26px;
     padding: 0 5px;
 }
+.inputinfo .item_input .managerange {
+    width: 500px;
+    height: 78px;
+    line-height: 26px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+}
+.inputinfo .item_input .managetitle {
+    vertical-align: top;
+}
 
 .icon_succ {
     vertical-align: text-bottom;
+    margin-left: 5px;
 }
 
 .inputinfo .item_input .btn_verify {
@@ -157,7 +168,6 @@ table {
 
 .inputinfo .item_input p {
     line-height: 16px;
-    margin-top: 20px;
 }
 
 .inputinfo .item_input .btn_upload {
@@ -180,8 +190,8 @@ table {
 }
 
 .inputinfo .item_input .W_btn_upload .txt2{
-	display: none;
-	color: #fff;
+    display: none;
+    color: #fff;
 }
 
 .inputinfo .upload_w.uploaded .W_btn_upload .txt2 {
@@ -190,7 +200,7 @@ table {
 }
 
 .inputinfo .item_input .W_btn_upload .W_btn_b {
-	margin-top: 18px;
+    margin-top: 18px;
 }
 
 .inputinfo .item_input .uploaded {
@@ -208,6 +218,6 @@ table {
     margin-left: 10px;
 }
 
-#S_CSS_bluev_inputinfo {
+#S_CSS_components_bluev_inputinfo_css {
     height: 42px;
 }

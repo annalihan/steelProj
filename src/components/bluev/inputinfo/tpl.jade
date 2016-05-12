@@ -100,17 +100,13 @@
                                 | 企业工商营业执照
                         - if (file_1_rec)
                             td
-                                div.upload_img(node-type="pirzePic")
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 只支持中国大陆工商局或市场监督管理局颁发的工商营业执照，且必须在有效期内。若办理过三证合一的企业，请再次上传最新的营业执照。非中国大陆地区认证请参考海外认证。
                         - else
                             td
                                 div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 只支持中国大陆工商局或市场监督管理局颁发的工商营业执照，且必须在有效期内。若办理过三证合一的企业，请再次上传最新的营业执照。非中国大陆地区认证请参考海外认证。
@@ -120,12 +116,7 @@
                                 | 认证公函
                         - if (file_2_rec)
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 重新上传
-                                //- img.file_preview(src="#{file_2_rec}")
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 下载填写
@@ -133,11 +124,7 @@
                                     | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 下载填写
@@ -149,22 +136,13 @@
                                 | 商标注册证（选填）
                         - if (file_3_rec)
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 重新上传
-                                img.file_preview(src="#{file_3_rec}")
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 如体现商标品牌，需上传商标注册证。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 如体现商标品牌，需上传商标注册证。
@@ -174,12 +152,7 @@
                                 | 网站ICP备案查询截图（选填）
                         - if (file_4_rec)
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 重新上传
-                                img.file_preview(src="#{file_4_rec}")
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 请上传工信部网站ICP备案号查询结果截图，
@@ -187,11 +160,7 @@
                                     | 。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 请上传工信部网站ICP备案号查询结果截图，
@@ -203,22 +172,22 @@
                                 | 软件著作证（选填）
                         - if (file_5_rec)
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 重新上传
-                                img.file_preview(src="#{file_5_rec}")
+                                div.upload_img(action-type="pirzePic")
+                                    //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //- a.W_btn_b.btn_upload
+                                    //-     em.W_ficon.S_ficon.ficon_add +
+                                    //-     | 重新上传
+                                //- img.file_preview(src="#{file_5_rec}")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 若认证应用类，请上传《软件著作证》。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
+                                    //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //- a.W_btn_b.btn_upload
+                                    //-     em.W_ficon.S_ficon.ficon_add +
+                                    //-     | 上传
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 若认证应用类，请上传《软件著作证》。
@@ -228,22 +197,22 @@
                                 | 其他材料（选填）
                         - if (file_6_rec)
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 重新上传
-                                img.file_preview(src="#{file_6_rec}")
+                                div.upload_img(action-type="pirzePic")
+                                //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                //-     a.W_btn_b.btn_upload
+                                //-         em.W_ficon.S_ficon.ficon_add +
+                                //-         | 重新上传
+                                //- img.file_preview(src="#{file_6_rec}")
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 若有其他证明材料，可上传文件。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
+                                    //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //- a.W_btn_b.btn_upload
+                                    //-     em.W_ficon.S_ficon.ficon_add +
+                                    //-     | 上传
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 若有其他证明材料，可上传文件。
@@ -339,7 +308,7 @@
                                 | 组织机构代码证
                         - if (file_1_rec)
                             td
-                                div.upload_img
+                                div.upload_img(action-type="pirzePic")
                                     p.S_txt2 JPG、GIF、PNG，不超过5M。
                                     a.W_btn_b.btn_upload
                                         em.W_ficon.S_ficon.ficon_add +
@@ -352,11 +321,11 @@
                                     | 。
                         - else
                             td
-                                div.upload_img
-                                    p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                    a.W_btn_b.btn_upload
-                                        em.W_ficon.S_ficon.ficon_add +
-                                        | 上传
+                                div.upload_img(action-type="pirzePic")
+                                    //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //- a.W_btn_b.btn_upload
+                                    //-     em.W_ficon.S_ficon.ficon_add +
+                                    //-     | 上传
                                 .file_formintro
                                     span.W_icon.icon_warnS.icon_formintro
                                     | 请上传组织机构代码证原件扫描件或拍照件，非中国大陆地区认证请参考
@@ -369,12 +338,8 @@
                                     | 认证公函
                             - if (file_2_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_2_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //- img.file_preview(src="#{file_2_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -382,11 +347,11 @@
                                         | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -398,22 +363,17 @@
                                     | 宗教场所登记证（选填）
                             - if (file_3_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_3_rec}")
+                                    div.upload_img(action-type="pirzePic")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 寺庙、道观补充宗教场所登记证。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 寺庙、道观补充宗教场所登记证。
@@ -423,22 +383,21 @@
                                     | 其他材料（选填）
                             - if (file_4_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_4_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 重新上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
@@ -449,12 +408,12 @@
                                     | 粉丝团认证公函
                             - if (file_2_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_2_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_2_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -462,11 +421,11 @@
                                         | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -478,22 +437,22 @@
                                     | 其他材料（选填）
                             - if (file_3_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_3_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_3_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
@@ -504,12 +463,12 @@
                                     | 认证公函
                             - if (file_2_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_2_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_2_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -517,11 +476,11 @@
                                         | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -533,22 +492,22 @@
                                     | 球迷俱乐部授权书（选填）
                             - if (file_3_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_3_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_3_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 需提供该球队授权。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 需提供该球队授权。
@@ -558,22 +517,22 @@
                                     | 其他材料（选填）
                             - if (file_4_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_4_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_4_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
@@ -584,12 +543,12 @@
                                     | 认证公函
                             - if (file_2_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_2_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                    //-     p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                    //-     a.W_btn_b.btn_upload
+                                    //-         em.W_ficon.S_ficon.ficon_add +
+                                    //-         | 重新上传
+                                    //- img.file_preview(src="#{file_2_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -597,11 +556,11 @@
                                         | ，填写完整后加盖红色公章，上传清晰的公函扫描件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 下载填写
@@ -613,22 +572,22 @@
                                     | 其他材料（选填）
                             - if (file_3_rec)
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 重新上传
-                                    img.file_preview(src="#{file_3_rec}")
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 重新上传
+                                    //- img.file_preview(src="#{file_3_rec}")
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。
                             - else
                                 td
-                                    div.upload_img
-                                        p.S_txt2 JPG、GIF、PNG，不超过5M。
-                                        a.W_btn_b.btn_upload
-                                            em.W_ficon.S_ficon.ficon_add +
-                                            | 上传
+                                    div.upload_img(action-type="pirzePic")
+                                        //- p.S_txt2 JPG、GIF、PNG，不超过5M。
+                                        //- a.W_btn_b.btn_upload
+                                        //-     em.W_ficon.S_ficon.ficon_add +
+                                        //-     | 上传
                                     .file_formintro
                                         span.W_icon.icon_warnS.icon_formintro
                                         | 若有其他证明材料，可上传文件。

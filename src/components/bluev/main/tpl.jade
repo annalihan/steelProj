@@ -1,40 +1,71 @@
 .bluevmain
-  .bluev_header
-  .bluev_intro
-    .title 认证说明
-    .intro
-      p 1.  认证成功后，您将享有蓝V相应的权益。包括蓝V标识、主页装饰等功能及蓝V专属客户服务。
-      p 2.  蓝V认证将严格仔细确认资料的真实有效性，保护组织及平台用户的合法权益。
-      p 3.  选择蓝V认证分类时，请依据“组织机构代码证”上显示的机构类型进行选择。
-      p 4.  企业、机构分类认证需一次性支付
-        span.span_orange 300
-        | 元/次认证审核服务费，此为认证审核服务的成本费用。无论认证成功或失败，此费用都不退。
-      p 5.  微博站方支持政府、媒体、校园在微博平台提供优质信息和服务，特针对以上类型免收认证费用
-  .bluev_class
-    .title 认证类别
-    .class
-  .bluev_guide
-    .title 蓝V运营指南
-    .guide
-      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide1.jpg');", href="weibo.com")
-      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide2.jpg');", href="weibo.com")
-      a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide3.jpg');", href="weibo.com")
-      a.guideimg(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide4.jpg');", href="weibo.com")
-  .bluev_help
-    .title 帮助与建议
-    .help
-      p 各类认证相关问题与建议请查看
-        span.span_orange 帮助中心
-        | ，微博将充分考虑用户的建议，为用户提供更满意的服务。如在申请中遇到问题，请私信
-        a(href="http://weibo.com/weibokefu") @微博客服
-        - if (focus == 1)
-          span.focus.W_btn_b
-            em.W_ficon.S_ficon.ficon_add +
-            | 关注
-        - else
-          span.focus.W_btn_b
-            em.W_ficon.S_ficon.ficon_right Y
-            | 已关注
-      p 个人真实身份认证，由
-        span.span_orange 国政通
-        |  提供支持。确保通过微博认证的个人用户均为真实的个人用户
+	.bluev_header
+	.bluev_intro
+		.title 认证说明
+		.intro
+			p 1.  认证成功后，您将享有官方认证用户相应身份权益，包括蓝V认证标识、专属客服等。
+			p 2.  官方认证将严格审核认证资料的真实有效性，以保护组织机构及平台用户的合法权益。
+			p 3.  选择官方认证分类时，请依据“组织机构代码证”上显示的机构类型进行选择。
+			p 4.  企业、机构认证需一次性支付
+				span.span_orange 300元/次
+				| 的认证审核服务费，此为认证审核服务的成本费用，不以认证成功为前提，不支持退款。
+			p 5.  微博站方支持政府、媒体、校园、公益组织在微博平台上提供优质信息和服务，特针对以上分类用户免受认证服务费。
+	.bluev_class
+		.title 认证类别
+		.class
+			.verifyclass
+				span.icon_class.icon_class1
+				p.verifytitle 企业认证
+				p.verifyintro 持有工商局下发营业执照、具有经济法人资格的企业、个体商户官方帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+			.verifyclass
+				span.icon_class.icon_class2
+				p.verifytitle 机构认证
+				p.verifyintro 图书馆、博物馆、美术馆、粉丝团体、体育俱乐部、车友会等官方帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+			.verifyclass
+				span.icon_class.icon_class3
+				p.verifytitle 媒体认证
+				p.verifyintro 报纸、杂志、电台、电视台、栏目、机构自媒体、会展娱乐、播客等帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+			.verifyclass
+				span.icon_class.icon_class4
+				p.verifytitle 政府官方认证
+				p.verifyintro 公安机关、司法、交通、旅游、医院、卫生、市政、工商等政府机构官方帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+			.verifyclass
+				span.icon_class.icon_class5
+				p.verifytitle 校园认证
+				p.verifyintro 校园官方、团委、院系、社团、校友会等官方帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+			.verifyclass
+				span.icon_class.icon_class6
+				p.verifytitle 公益认证
+				p.verifyintro 基金会、公益机构、公益项目等官方帐号认证。
+				a(href="javascript:void(0)",action-type="verify",action-data="is_orange_v=#{is_orange_v}&is_agent_account=#{is_agent_account}").btn_apply.W_btn_a.btn_36px 申请
+	.bluev_guide
+		.title 蓝V运营指南
+		.guide
+			a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide1.jpg');", href="weibo.com")
+			a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide2.jpg');", href="weibo.com")
+			a.guideimg.mr22(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide3.jpg');", href="weibo.com")
+			a.guideimg(style="background:url('http://js.t.sinajs.cn/t6/business/src/css/bluev/img/bluev_guide4.jpg');", href="weibo.com")
+	.bluev_help
+		.title 帮助与建议
+		.help
+			p 各类认证相关问题与建议请查看
+				a(href="http://help.weibo.com/newtopic/e",target="_blank") 帮助中心
+				| ，微博将充分考虑用户的建议，为用户提供更满意的服务。如在申请中遇到问题，请私信 
+				a(href="http://weibo.com/weibokefu",target="_blank") @微博客服
+				a(href="javascipt:void(0)")
+					- if (focus == 1)
+						span(node-type="add").focus.W_btn_b
+							em.W_ficon.S_ficon.ficon_add +
+							| 关注
+					- else
+						span.focus.W_btn_b
+							em.W_ficon.S_ficon.ficon_right Y
+							| 已关注
+			p 个人真实身份认证，由 
+				a(href="http://q.id5.cn/",target="_blank") 国政通
+				|  提供支持。确保通过微博认证的个人用户均为真实的个人用户

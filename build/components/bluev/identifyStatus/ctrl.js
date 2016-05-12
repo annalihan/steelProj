@@ -1,0 +1,1 @@
+steel.d("components/bluev/identifyStatus/ctrl",[],function(t,s,c){c.exports=function(t){t.set({data:"/v1/public/aj/bluev/identifyStatus",tpl:"./tpl",logic:"./logic",css:"./css"})}});

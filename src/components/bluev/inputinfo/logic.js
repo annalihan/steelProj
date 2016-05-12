@@ -29,11 +29,12 @@ module.exports = function(node) {
             getVerifyCode: function() {
                 console.log('....');
             },
-            imgUploadInit: function() {
-                if (!_this.DOM['pirzePic']) {
+            imgUploadInit: function(i) {
+                if (!$.sizzle('[action-type=pirzePic]',document.body)) {
                     return;
                 }
-                _this.objs.uploadPic = $.common.edit.picUploader(_this.DOM['pirzePic']);
+
+                _this.objs.uploadPic = $.common.edit.picUploader($.sizzle('[action-type=pirzePic]',document.body)[i]);
                 _this.objs.uploadPic.initWidget(_this.objs.uploadPic.DOM['upfile_text'], {
                     imgMaxWidth : optSize.imgMaxWidth,
                     imgMaxHeight : optSize.imgMaxHeight,
@@ -125,7 +126,9 @@ module.exports = function(node) {
     var initPlugins = function() {
         // _this.objs.recordForm = $.common.form.bindFormV2(_this.DOM.recordForm, {}, _this.bindFormFun);
         _this.objs.recordForm = $.common.form.verify(node, _this.bindFormFun);
-        _this.DOM_eventFun.imgUploadInit();
+        for (var i=0, len=$.sizzle('[action-type=pirzePic]',document.body).length; i<len; i++){
+            _this.DOM_eventFun.imgUploadInit(i);
+        }
     };
     //-------------------------------------------
 

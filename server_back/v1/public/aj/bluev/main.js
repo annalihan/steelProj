@@ -7,7 +7,9 @@ module.exports = {
         "code": "100000",
         "msg": "succ",
         "data":{
-            "focus" : 0
+            "focus" : 1,
+            "is_agent_account":true,
+            "is_orange_v":false
         }
     }
 };

@@ -1,0 +1,1 @@
+steel.d("components/bluev/identifysuccess/ctrl",[],function(s,c,t){t.exports=function(s){s.set({data:"/v1/public/aj/bluev/identifysuccess",tpl:"./tpl",logic:"./logic",css:"./css"})}});

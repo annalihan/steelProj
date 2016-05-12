@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+        title 蓝V认证
+        link(href='http://img.t.sinajs.cn/t6/style/css/module/base/frame.css?version=#{g_version_css}', type='text/css', rel='stylesheet')
+        link(href='http://img.t.sinajs.cn/t4/appstyle/e_t6/css/pages/fans/service_centre.css?version=#{g_version_css}', type='text/css', rel='stylesheet')
+        link(href='http://img.t.sinajs.cn/t4/appstyle/e_t6/skin/default/skin.css?version=#{g_version_css}', type='text/css', rel='stylesheet')
+        script.
+            $CONFIG = {};
+            $CONFIG['uid'] = '1820868023';
+            $CONFIG['oid'] = '1820868023';
+            $CONFIG['nick']='Finrila';
+            $CONFIG['domain']='finrila';
+            $CONFIG['islogin']='1';
+            $CONFIG['timeDiff']=(new Date() - 1430296560000);
+            $CONFIG['servertime']='1430296560';
+            $CONFIG['jsPath']='http://js.t.sinajs.cn/t6/';
+            $CONFIG['cssPath']='http://img.t.sinajs.cn/t6/';
+            $CONFIG['imgPath']='http://img.t.sinajs.cn/t6/';
+            $CONFIG['version']='e5cb1de8f4df303e';
+    body
+    script(src="http://js.t.sinajs.cn/t6/business/lib/lib.js")
+    script(src="http://js.t.sinajs.cn/t6/business/app/bluev.js")
+    script.
+        steel.boot('app/bluev');

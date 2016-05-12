@@ -53,6 +53,11 @@ div.infoconfirm
                         th 其他材料
                         td
                             img.file_preview(src="#{file_6_rec}")
+                    tr
+                        th
+                        td.focus
+                            input.W_checkbox(type="checkbox", checked)
+                            | 关注 @企业微博助理，获取更多微博运营服务。
             - if (dapart == "group")
                 tbody
                     tr
@@ -124,4 +129,9 @@ div.infoconfirm
                             th 其他材料
                             td
                                 img.file_preview(src="#{file_3_rec}")
+                    tr
+                        th
+                        td.focus
+                            input.W_checkbox(type="checkbox", checked)
+                            | 关注 @企业微博助理，获取更多微博运营服务。
     include ../common/footer

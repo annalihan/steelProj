@@ -1,0 +1,1 @@
+steel.d("components/bluev/showinfo/ctrl",[],function(o,s,t){t.exports=function(o){o.set({data:"/v1/public/aj/bluev/showinfo",tpl:"./tpl",logic:"./logic",css:"./css"})}});

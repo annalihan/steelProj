@@ -56,7 +56,7 @@ module.exports = function(node) {
                 _this.DOM.price.innerHTML = '¥5000/年';
                 _this.DOM.original.innerHTML = '¥5300/年';
                 _this.DOM.notice.innerHTML = '返2000现金红包';
-                _this.DOM.item01.setAttribute('src','http://img.t.sinajs.cn/t6/business/src/css/bluev/img/temp01.png');
+                $.removeClassName(_this.DOM.item01,'disabled');
             },
             selectOp2Fun:function(){
                 $.removeClassName(_this.DOM.op1,'sel');
@@ -64,9 +64,9 @@ module.exports = function(node) {
                 _this.DOM.price.innerHTML = '¥10000/年';
                 _this.DOM.original.innerHTML = '¥10100/年';
                 _this.DOM.notice.innerHTML = '返3000现金红包';
-                _this.DOM.item01.setAttribute('src','temp02.png');
+                $.addClassName(_this.DOM.item01,'disabled');
             },
-            payFun:function(){
+            payFun:function(){ 
                 _this.objs.confirmDia = $.ui.dialog();
                 _this.objs.confirmDia.setTitle('');
                 _this.objs.confirmDia.setContent(PAYING_TEMP);
@@ -100,7 +100,7 @@ module.exports = function(node) {
     };
     //-------------------------------------------
 
-    //---Dom的获取方法定义区---------------------------
+    //---Dom的获取方法定义区--------------------------- 
     var parseDOM = function() {
         _this.DOM = $.utils.kit.dom.parseDOM($.builder(node).list);
     };

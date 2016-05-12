@@ -1,0 +1,1 @@
+steel.d("utils/kit/extra/language",[],function(e,t,n){STK.register("utils.kit.extra.language",function(e){return window.$LANG||(window.$LANG={}),function(t,n){var i=e.core.util.language(t,$LANG);return i=i.replace(/\\}/gi,"}"),n&&(i=e.templet(i,n)),i}})});

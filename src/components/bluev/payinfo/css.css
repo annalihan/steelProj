@@ -18,13 +18,23 @@
 .payinfo .dd .price{font-size:18px;color:#fa7d3c}
 .payinfo .dd del{color:#808080;margin:0 20px;}
 .payinfo .dd .notice{padding:3px 5px;border-radius:2px;background-color: #e91020;color:#fff;font-size:10px;}
+.payinfo .dd .price,
+.payinfo .dd del,
+.payinfo .dd .notice{width:80px;}
 .payinfo .optBtn{margin-left:400px;}
 .payinfo .optBtn a{margin:0 5px;}
 .intro{margin:0 50px;padding:30px 0;border-top: 1px solid #f2f2f5;}
 .intro .item{float:left;margin-right:42px;width:142px;height:178px;text-align: center;}
-.intro .item:nth-child(5n){margin-right: 0}
+.intro .item:nth-child(5n),
+.intro .last{margin-right: 0}
 .intro .item img{display: block;margin:0 auto;}
+.intro .disabled img{-webkit-filter: grayscale(100%);
+                        -moz-filter: grayscale(100%);
+                         -ms-filter: grayscale(100%);
+                          -o-filter: grayscale(100%);
+                             filter: grayscale(100%);
+                             filter: gray;}  
 .intro .title{margin-top:5px;color:#333;font-size:14px;line-height:22px;}
 .intro p{color:#808080;line-height:22px;}
 
-#S_CSS_bluev_payinfo {height: 42px;}
+#S_CSS_components_bluev_payinfo_css {height: 42px;}

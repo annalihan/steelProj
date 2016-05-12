@@ -1,0 +1,1 @@
+steel.d("utils/str/bLength",[],function(t,n,e){STK.register("utils.str.bLength",function(t){return function(t){if(!t)return 0;var n=t.match(/[^\x00-\xff]/g);return t.length+(n?n.length:0)}})});

@@ -10,7 +10,7 @@
  * 		'inputListener': function(){STK.log('--autoHeightTextArea--');}
  * });
  */
-$Import('common.channel.at');
+// $Import('common.channel.at');
 STK.register('utils.kit.dom.autoHeightTextArea', function($) {
 	var getTextAreaHeight = function(el) {
 		var getStyle = $.core.dom.getStyle, snapHeight;
@@ -55,9 +55,9 @@ STK.register('utils.kit.dom.autoHeightTextArea', function($) {
 		return snapHeight;
 	};
 	return function(spec) {
-		var textArea		= spec.textArea, 
-			maxHeight		= spec.maxHeight, 
-			inputListener	= spec.inputListener, 
+		var textArea		= spec.textArea,
+			maxHeight		= spec.maxHeight,
+			inputListener	= spec.inputListener,
 			textStyle		= textArea.style,
 			listener;
 		//当用户输入时，改变TextArea对像高度
@@ -75,15 +75,15 @@ STK.register('utils.kit.dom.autoHeightTextArea', function($) {
 		})()
 		if(!$.core.util.browser.IE){
 			try{
-			$.common.channel.at.register("open",function(){
+			/*$.common.channel.at.register("open",function(){
 			$.E("_____textarea_____").style.cssText=getCssText(textArea);
-		});
+		});*/
 		}
 		catch(ex){
 			$.log(ex);
 		}
 		}
-		
+
 		//对TextArea进行事件绑定
 		if ( !textArea.binded ) {
 			$.addEvent(textArea, 'keyup', listener);
