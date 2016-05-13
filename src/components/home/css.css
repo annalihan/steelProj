@@ -10,7 +10,7 @@ html, body{
 }
 
 /*pagecontrol*/
-.page_wrap{
+/*.page_wrap{
   width: 100%;
   overflow: hidden;
     position: absolute;
@@ -60,7 +60,7 @@ html, body{
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
     text-size-adjust: none;
-}
+}*/
 
 /*tab style*/
 .sliderWrapper{

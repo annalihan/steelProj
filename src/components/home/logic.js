@@ -3,7 +3,7 @@ require('utils/kit/dom/parseDOM');
 require('ui/alert');
 require('common/trans/bluev');
 require('ui/dialog');
-require('ui/confirm');
+require('ui/iscroll');
 
 var $ = STK;
 
@@ -46,6 +46,7 @@ module.exports = function(node) {
 
     //---模块的初始化方法定义区-------------------------
     var initPlugins = function() {
+        _this.objs.scroll = $.ui.iscroll(_this.DOM['page_wrap']);
     };
     //-------------------------------------------
 
