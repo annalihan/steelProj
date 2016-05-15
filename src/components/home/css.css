@@ -61,7 +61,12 @@ html, body{
     -o-text-size-adjust: none;
     text-size-adjust: none;
 }*/
-
+.scroller_list{
+    margin-bottom: 6rem;
+}
+.scroll-loader{
+    display: none;
+}
 /*tab style*/
 .sliderWrapper{
     position: relative;

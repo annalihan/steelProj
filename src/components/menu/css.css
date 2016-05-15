@@ -1,12 +1,12 @@
 /*tab style*/
 header{
-  position: absolute;
   width: 100%;
   font-size: 1.2rem;
-  position: relative;
+  position: fixed;
   background: #fefefe;
     box-shadow:0 0 3px #ccc;
   height: 3.2rem;
+  z-index: 1;
 }
 header .tab_main{
   position: absolute;

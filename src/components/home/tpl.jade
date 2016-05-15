@@ -1,4 +1,3 @@
-include ../menu/tpl
 div.page_wrap(node-type="page_wrap")
   div.page_inner
     div.slider_page
@@ -13,13 +12,17 @@ div.page_wrap(node-type="page_wrap")
                 div.itemWrapper
                   div.imgWrapper
                     img.project_pic(src=item.picURL, alt="")
+                    if item.tagText!=''
+                      div.typeFlagWrapper
+                        span.typeFlag.typeFlagf26d5f= item.tagText
+                        span.typeFlagAfter.typeFlagAfterf26d5f
                     div.btn_subWeiBo_bg
                       a.btn_subWeiBo
                   div.textWrapper
                     div.titleWrapper
                       p.projectName= item.projectName
                       div.leftLine.collect_wrapper
-                        a.btn_collected(href="javascript: void(0);")
+                        a(href="javascript: void(0);", class=item.isCollected?"btn_collect":"btn_collected")
                     div.progressWrapper
                       div.progress
                         div.progressShape(style={width: item.progress+'%'})
@@ -30,36 +33,36 @@ div.page_wrap(node-type="page_wrap")
                       div.td.rightLine.projectInfoTextWrapper
                         p.projectInfoText= item.people
                         p.projectInfoLabel
-                          i.cf_iconfont.icon_people_patch
+                          i.cf_iconfont.icon_people_patch &#xe614;
                           span 支持人数
                       div.td.rightLine.noDis
                         p.projectInfoText=item.favor
                         p.projectInfoLabel
-                          i.cf_iconfont.icon_people_patch
+                          i.cf_iconfont.icon_people_patch &#xe614;
                           span 收藏人数
                       div.td.rightLine.projectInfoTextWrapper
                         p.projectInfoText
                           span.moneyUnit ￥
                           span=item.moneyGot
                         p.projectInfoLabel
-                          i.cf_iconfont
+                          i.cf_iconfont &#xe616;
                           span 已筹款
                       div.td.rightLine.noDis
                         p.projectInfoText
                           span.moneyUnitNyTp ￥
                           span=item.aimMoney
                         p.projectInfoLabel
-                          i.cf_iconfont
+                          i.cf_iconfont &#xe616;
                           span 目标金额
                       div.td.noDis
                         p.projectInfoText=item.date
                         p.projectInfoLabel
-                          i.cf_iconfont
+                          i.cf_iconfont &#xe612;
                           span 上线日期
                       div.td.projectInfoTextWrapper
                         p.projectInfoText=item.leftDays
                         p.projectInfoLabel
-                          i.cf_iconfont
+                          i.cf_iconfont &#xe612;
                           span 剩余天数
           p.non_cont 没有更多内容了
 include ../footer/tpl

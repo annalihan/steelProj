@@ -24,7 +24,7 @@ var pathnamePrefix = '/t6/business/';
 var back_pathnamePrefix = '/';
 var src_base = 'src/';
 var front_base = 'server_front';
-var front_hostname = '127.0.0.1 js.t.sinajs.cn img.t.sinajs.cn ';
+var front_hostname = '127.0.0.1 js1.t.sinajs.cn img.t.sinajs.cn ';
 var back_base = 'server_back'; //模拟后端的文件放置目录
 var back_hostname = '127.0.0.1 e.weibo.com'; //后端的HOST，目的是真实模拟后端的页面路由请求，提供出前端可仿真的功能，比如 /index 对应 /html/index.html
 
@@ -212,9 +212,6 @@ function steelServer(options) {
         gzip: !options.debug,
         access_control_allow: true,
         staticProxy: {
-            'dss-backend.sc.weibo.com/*': '127.0.0.1:8700',
-            'img*.t.sinajs.cn/*': 'js3.t.sinajs.cn',
-            'js.t.sinajs.cn/*': 'js3.t.sinajs.cn'
         },
         pm2: options.pm2,
         tasks: options.tasks

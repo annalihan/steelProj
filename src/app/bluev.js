@@ -18,8 +18,8 @@ var version = window.$CONFIG && $CONFIG['version'];
 steel.config({
     version: version,
     basePath: '/',
-    jsPath: 'http://js.t.sinajs.cn/t6/business/',
-    cssPath: 'http://js.t.sinajs.cn/t6/business/',
+    jsPath: 'http://js1.t.sinajs.cn/t6/business/',
+    cssPath: 'http://js1.t.sinajs.cn/t6/business/',
     ajaxPath: '/',
     mainBox: mainBox,
     useCssPrefix: false,

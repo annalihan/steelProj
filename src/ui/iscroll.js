@@ -1,6 +1,6 @@
 /*! iScroll v5.2.0 ~ (c) 2008-2016 Matteo Spinelli ~ http://cubiq.org/license */
 STK.register('ui.iscroll',function($){
-  return function(node){
+  return function(node,options){
 var rAF = window.requestAnimationFrame  ||
   window.webkitRequestAnimationFrame  ||
   window.mozRequestAnimationFrame   ||
@@ -1652,6 +1652,6 @@ IScroll.prototype = {
   }
 };
 IScroll.utils = utils;
-return new IScroll(node);
+return new IScroll(node,options);
 }
 });
