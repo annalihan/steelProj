@@ -128,11 +128,11 @@ var require_global_loadingNum = 0;
  * parse URL
  * @method core_parseURL
  * @private
- * @param {string} str 
- *    可以传入 protocol//host 当protocol不写时使用location.protocol; 
+ * @param {string} str
+ *    可以传入 protocol//host 当protocol不写时使用location.protocol;
  * @return {object}
  * @example
- * core_parseURL( 'http://t.sina.com.cn/profile?beijing=huanyingni' ) === 
+ * core_parseURL( 'http://t.sina.com.cn/profile?beijing=huanyingni' ) ===
     {
         hash : ''
         host : 't.sina.com.cn'
@@ -235,8 +235,8 @@ function core_object_extend(target, key, value) {
 }
 /**
  * 判断地址中是否有协议
- * @param  {string} url 
- * @return {boolean} 
+ * @param  {string} url
+ * @return {boolean}
  */
 function core_hasProtocol(url) {
     return /^([a-z]+:)?\/\/\w+/i.test(url);
@@ -314,7 +314,7 @@ function core_fixUrl_handleTwoDots(url) {
  * @id  core_URL
  * @alias
  * @param {String} url
- * @param {Object} 
+ * @param {Object}
     {
         'isEncodeQuery'  : {Boolean}, //对query编码
         'isEncodeHash'   : {Boolean}  //对hash编码
@@ -342,7 +342,7 @@ function core_fixUrl_handleTwoDots(url) {
 /*
  * 合并参数，不影响源
  * @param {Object} oSource 需要被赋值参数的对象
- * @param {Object} oParams 传入的参数对象 
+ * @param {Object} oParams 传入的参数对象
  * @param {Boolean} isown 是否仅复制自身成员，不复制prototype，默认为false，会复制prototype
 */
 function core_object_parseParam(oSource, oParams, isown){
@@ -497,10 +497,10 @@ function core_uniqueID( obj ) {
  * 返回在数组中的索引
  * @method core_array_indexOf
  * @private
- * @param {Array} oElement 
- * @param {Any} oElement 
+ * @param {Array} oElement
+ * @param {Any} oElement
  *  需要查找的对象
- * @return {Number} 
+ * @return {Number}
  *  在数组中的索引,-1为未找到
  */
 function core_array_indexOf( oElement, aSource ) {
@@ -521,7 +521,7 @@ function core_array_indexOf( oElement, aSource ) {
  * @private
  * @param {arrayLike} obj
  *  需要查找的对象
- * @return {Array} 
+ * @return {Array}
  */
 function core_array_makeArray( obj ) {
     return slice.call(obj, 0, obj.length);
@@ -660,7 +660,7 @@ var router_base_currentHref = location.toString();
  * @param {string} type
  * @param {string} fn
  */
-var core_event_addEventListener = isAddEventListener ? 
+var core_event_addEventListener = isAddEventListener ?
     function( el, type, fn, useCapture) {
         el.addEventListener( type, fn, useCapture === undefined ? false : useCapture);
     }
@@ -711,7 +711,7 @@ function core_dom_ready( handler ) {
  * preventDefault
  * @method core_event_preventDefault
  * @private
- * @return {Event} e 
+ * @return {Event} e
  */
 function core_event_preventDefault( event ) {
     if ( event.preventDefault ) {
@@ -919,7 +919,7 @@ function core_dom_removeNode( node ) {
  * @param  {object} resContainer 资源容器
  * @param  {string} type         错误类型
  * @param  {any} ...         错误信息
- * @return {undefined}          
+ * @return {undefined}
  */
 function render_control_triggerError(resContainer, type) {
     var args = core_array_makeArray(arguments).slice(1);
@@ -1899,6 +1899,7 @@ function render_control_setTpl(resContainer) {
     }
 }
 function render_control_setTpl_toRender(resContainer) {
+    // alert(resContainer.tplFn);
     resContainer.tplReady = true;
     render_control_render(resContainer);
 }
@@ -1991,6 +1992,7 @@ function render_control_setData(resContainer, tplChanged) {
         return;
     }
     var dataType = core_object_typeof(data);
+    console.log(data);
     if (dataType === 'object') {
         render_control_setData_toRender(data, resContainer, tplChanged);
     } else if (dataType === 'string') {
@@ -2523,7 +2525,7 @@ function router_router_get(refreshRouterValue) {
  * 路由前进到某个地址
  * @param  {string} url 页面地址
  * @param  {Object} data 想要传递到新页面的对象
- * @return {undefined} 
+ * @return {undefined}
  */
 function router_router_push(url, data) {
     router_router_set(url, data);
@@ -2542,7 +2544,7 @@ function router_router_replace(url, data) {
  * @param  {string} url     地址 必添
  * @param  {boolean} replace 是否替换当前页面 不产生历史
  * @param  {Object} data 想要传递到新页面的对象
- * @return {undefined} 
+ * @return {undefined}
  */
 function router_router_set(url, replace, data) {
     //多态
@@ -2577,7 +2579,7 @@ function router_router_set(url, replace, data) {
 }
 /**
  * 单页面刷新
- * @return {undefined} 
+ * @return {undefined}
  */
 function router_router_refresh() {
     if (router_base_singlePage) {
@@ -2704,18 +2706,18 @@ function resource_fixUrl_handle(path, url, basePath, hrefPath) {
 }
 
 /**
- * 异步调用方法 
+ * 异步调用方法
  */
 function core_asyncCall(fn, args) {
     setTimeout(function() {
         fn.apply(undefined, args);
     });
 }
-/** 
+/**
  * 资源队列管理
  * @params
  * url 请求资源地址
- * succ 
+ * succ
  * err
  * access 是否成功
  * data 资源数据
@@ -2753,7 +2755,7 @@ function resource_queue_del(url) {
         'contentType': 'application/x-www-form-urlencoded',
         'responseType': 'text'// xml or text or json
     };
- * @return {Void} 
+ * @return {Void}
  * @example
  * loader_ajax(url, {//'url':'/ajax.php',
     'args':{'id':123,'test':'true'},
@@ -2865,15 +2867,15 @@ function loader_ajax(url, onComplete, onFail){//(url, callback)
         var _XHR = false;
         try {
             _XHR = new XMLHttpRequest();
-        } 
+        }
         catch (try_MS) {
             try {
                 _XHR = new ActiveXObject("Msxml2.XMLHTTP");
-            } 
+            }
             catch (other_MS) {
                 try {
                     _XHR = new ActiveXObject("Microsoft.XMLHTTP");
-                } 
+                }
                 catch (failed) {
                     _XHR = false;
                 }
@@ -3000,7 +3002,7 @@ function resource_preLoad_setRes(url, type, complete, success, fail) {
 }
 /**
  * 得到预加载的资源
- * @param  {string} url 
+ * @param  {string} url
  */
 function resource_preLoad_get(url) {
     return resource_preLoad_resMap[url];
@@ -3350,7 +3352,7 @@ function require_define(ns, deps, construtor) {
 }
 
 
- 
+
 
 
 //暂不做
@@ -3366,7 +3368,7 @@ config_push(function (parseParamFn) {
 function resource_boot() {
     resource_preLoad_bootLoad();
 }
- 
+
 /**
  * 渲染管理器的主页面
  */
@@ -3398,7 +3400,7 @@ config_push(function(parseParamFn) {
 function render_boot() {
     render_stage_init();
 }
- 
+
 /**
  * 路由配置
  */
@@ -3647,6 +3649,9 @@ function router_boot() {
     router_router_clearTransferData();
     if (router_router_get(true).config) {
         router_listen_fireRouterChange();
+    }
+    else{
+        log("Error: check router config", router_router_get(true).path);
     }
     //浏览器支持HTML5，且应用设置为单页面应用时，绑定路由侦听； @shaobo3
     isHTML5 && router_base_singlePage && router_listen();
@@ -5975,5 +5980,5 @@ STK.register("core.util.pageletM",function($){var JSHOST="http://js.t.sinajs.cn/
 ;
 steel.config({
   debug: true,
-  jsPath: "http://js.t.sinajs.cn/t6/business/"
+  jsPath: "http://js1.t.sinajs.cn/t6/business/"
 });

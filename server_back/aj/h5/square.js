@@ -1,7 +1,7 @@
 module.exports = {
     method: "get",
     data: {
-    "code": 100000,
+    "code": '100000',
     "msg": "success",
     "data": {
         "role": false,

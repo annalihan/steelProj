@@ -1,68 +1,64 @@
-div.page_wrap(node-type="page_wrap")
-  div.page_inner
-    div.slider_page
-      .wrapper_list
-        .scroller_list
-          .scroll-loader
-            em.scroll-pull-up
-            span 下拉刷新
-          each item in list
-            .wrapper
-              div
-                div.itemWrapper
-                  div.imgWrapper
-                    img.project_pic(src=item.picURL, alt="")
-                    if item.tagText!=''
-                      div.typeFlagWrapper
-                        span.typeFlag.typeFlagf26d5f= item.tagText
-                        span.typeFlagAfter.typeFlagAfterf26d5f
-                    div.btn_subWeiBo_bg
-                      a.btn_subWeiBo
-                  div.textWrapper
-                    div.titleWrapper
-                      p.projectName= item.projectName
-                      div.leftLine.collect_wrapper
-                        a(href="javascript: void(0);", class=item.isCollected?"btn_collect":"btn_collected")
-                    div.progressWrapper
-                      div.progress
-                        div.progressShape(style={width: item.progress+'%'})
-                      p.progressText(class=item.progress>=100?"progressText_out":'', style={left: (item.progress>=89?"89.5%":item.progress+"%")})
-                        span=item.progress
-                        span.progressTextUnit %
-                    div.table.projectInfoWrapper
-                      div.td.rightLine.projectInfoTextWrapper
-                        p.projectInfoText= item.people
-                        p.projectInfoLabel
-                          i.cf_iconfont.icon_people_patch &#xe614;
-                          span 支持人数
-                      div.td.rightLine.noDis
-                        p.projectInfoText=item.favor
-                        p.projectInfoLabel
-                          i.cf_iconfont.icon_people_patch &#xe614;
-                          span 收藏人数
-                      div.td.rightLine.projectInfoTextWrapper
-                        p.projectInfoText
-                          span.moneyUnit ￥
-                          span=item.moneyGot
-                        p.projectInfoLabel
-                          i.cf_iconfont &#xe616;
-                          span 已筹款
-                      div.td.rightLine.noDis
-                        p.projectInfoText
-                          span.moneyUnitNyTp ￥
-                          span=item.aimMoney
-                        p.projectInfoLabel
-                          i.cf_iconfont &#xe616;
-                          span 目标金额
-                      div.td.noDis
-                        p.projectInfoText=item.date
-                        p.projectInfoLabel
-                          i.cf_iconfont &#xe612;
-                          span 上线日期
-                      div.td.projectInfoTextWrapper
-                        p.projectInfoText=item.leftDays
-                        p.projectInfoLabel
-                          i.cf_iconfont &#xe612;
-                          span 剩余天数
-          p.non_cont 没有更多内容了
+.wrapper_list(node-type="wrapper_list")
+  .scroller_list
+    .scroll-loader(node-type="scroll-loader",style="display:none" )
+      em.scroll-pull-up
+      span 下拉刷新
+    ul#content
+      each item in list
+        li.itemWrapper
+          div.imgWrapper
+            img.project_pic(src=item.picURL, alt="")
+            if item.tagText!=''
+              div.typeFlagWrapper
+                span.typeFlag.typeFlagf26d5f= item.tagText
+                span.typeFlagAfter.typeFlagAfterf26d5f
+            div.btn_subWeiBo_bg
+              a.btn_subWeiBo
+          div.textWrapper
+            div.titleWrapper
+              p.projectName= item.projectName
+              div.leftLine.collect_wrapper
+                a(href="javascript: void(0);", class=item.isCollected?"btn_collect":"btn_collected")
+            div.progressWrapper
+              div.progress
+                div.progressShape(style={width: item.progress+'%'})
+              p.progressText(class=item.progress>=100?"progressText_out":'', style={left: (item.progress>=89?"89.5%":item.progress+"%")})
+                span=item.progress
+                span.progressTextUnit %
+            div.table.projectInfoWrapper
+              div.td.rightLine.projectInfoTextWrapper
+                p.projectInfoText= item.people
+                p.projectInfoLabel
+                  i.cf_iconfont.icon_people_patch &#xe614;
+                  span 支持人数
+              div.td.rightLine.noDis
+                p.projectInfoText=item.favor
+                p.projectInfoLabel
+                  i.cf_iconfont.icon_people_patch &#xe614;
+                  span 收藏人数
+              div.td.rightLine.projectInfoTextWrapper
+                p.projectInfoText
+                  span.moneyUnit ￥
+                  span=item.moneyGot
+                p.projectInfoLabel
+                  i.cf_iconfont &#xe616;
+                  span 已筹款
+              div.td.rightLine.noDis
+                p.projectInfoText
+                  span.moneyUnitNyTp ￥
+                  span=item.aimMoney
+                p.projectInfoLabel
+                  i.cf_iconfont &#xe616;
+                  span 目标金额
+              div.td.noDis
+                p.projectInfoText=item.date
+                p.projectInfoLabel
+                  i.cf_iconfont &#xe612;
+                  span 上线日期
+              div.td.projectInfoTextWrapper
+                p.projectInfoText=item.leftDays
+                p.projectInfoLabel
+                  i.cf_iconfont &#xe612;
+                  span 剩余天数
+    p.non_cont 没有更多内容了
 include ../footer/tpl

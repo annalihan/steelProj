@@ -29,7 +29,7 @@ html, body{
 .slider_page{
     float: left;
     position: relative;
-}
+}*/
 .wrapper_list {
     position: absolute;
     z-index: 1;
@@ -60,13 +60,27 @@ html, body{
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
     text-size-adjust: none;
-}*/
+}
+
 .scroller_list{
     margin-bottom: 6rem;
 }
-.scroll-loader{
-    display: none;
+.scroller_list ul{
+  width: 100%;
+  position: relative;
 }
+.scroller_list li{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 /*tab style*/
 .sliderWrapper{
     position: relative;

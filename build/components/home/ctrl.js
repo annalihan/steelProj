@@ -1,1 +1,1 @@
-steel.d("components/home/ctrl",[],function(t,c,s){s.exports=function(t){t.set({data:"/v1/public/aj/h5/square",tpl:"./tpl",logic:"./logic",css:"./css"})}});
+steel.d("components/home/ctrl",[],function(t,s,c){c.exports=function(t){t.set({data:"/aj/h5/square",tpl:"./tpl",logic:"./logic",css:"./css"})}});
